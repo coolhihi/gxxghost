@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{> custom/meta}}
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+
+    <script type="text/javascript">
+        {{> custom/config}}
+    </script>
+</head>
+<body class="{{body_class}}">
+    <div class="gxx_header">
+        <div class="gxx_header_con clearfix">
+            <div class="gxx_stitle">
+                <div class="gxx_sname">{{@blog.title}}</div>
+                <div class="gxx_ssign">{{@blog.description}}</div>
+            </div>
+            <div class="gxx_search" id="bdcs">
+                <form id="bdcs-search-form" action="http://zhannei.baidu.com/cse/search" method="get" target="_blank">
+                    <input name="s" type="hidden" id="bdcs-search-form-sid" value="">
+                    <input type="search" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" value="" placeholder="搜索" />
+                    <input name="entry" type="hidden" value="1">
+                    <i class="gxxicon-search"></i>
+                    <input type="submit" class="gxxicon-top bdcs-search-form-submit" id="bdcs-search-form-submit" value="" />
+                </form>
+            </div>
+            {{navigation}}
+        </div>
+    </div>
+
+    <div class="gxx_frame{{#is "post"}} gxx_hidesidebar{{/is}}">
+        <div class="gxx_frame_con clearfix">
+            {{> sidebar}}
+            <div class="site-wrapper">
+
+                {{! Everything else gets inserted here }}
+                {{{body}}}
+
+                <footer class="site-footer clearfix">
+                    <section class="copyright">
+                    <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+                    <section class="poweredby">Published with <a href="https://ghost.org">Ghost</a>. Theme by <a href="http://gxxsite.com">COoL</a>
+                    <span class="bdanly">
+                        {{>custom/hm}}
+                    </span></section>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div class="gxx_floatlayer">
+        <ul class="gxx_themeselector">
+            <li class="gxx_theme_btn"><i class="gxxicon-theme"></i></li>
+            <li class="gxx_theme_1_btn gxx_theme_selected"><i class="gxxicon-theme"></i></li>
+            <li class="gxx_theme_2_btn"><i class="gxxicon-theme"></i></li>
+            <li class="gxx_theme_3_btn"><i class="gxxicon-theme"></i></li>
+            <li class="gxx_theme_4_btn"><i class="gxxicon-theme"></i></li>
+        </ul>
+        <a class="gxx_gotopbtn">
+            <i class="gxxicon-top"></i>
+        </a>
+    </div>
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.11.1-rc2/jquery.min.js"></script>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset "js/jquery.scrollTo.min.js"}}"></script>
+
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.min.js"}}"></script>
+    {{! The main JavaScript file for GxxGhost }}
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+</body>
+</html>

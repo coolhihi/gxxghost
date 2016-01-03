@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@mixin themeByColor($color){
+    .gxx_header{
+        background:$color;
+    }
+    .post-title{
+        a:hover{
+            color:saturate($color,40%);
+        }
+    }
+    .post-content{
+        blockquote{
+            border-left-color:lighten($color,20%);
+        }
+    }
+}

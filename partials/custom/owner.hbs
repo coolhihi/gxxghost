@@ -1,0 +1,25 @@
+{{! show owner info in sidebar }}
+
+<div class="gxx_sidebar_i">
+    <a class="gxx_myface" href="/author/cool"><img src="/assets/img/myface.png" /></a>
+    <div class="gxx_myname">关鑫贤 / COoL<br /><span>专注前端的全栈工程师</span></div>
+    <div class="gxx_mycontact">
+        <a class="gxxicon-mail" href="mailto://master@gxxsite.com" target="_blank"></a>
+        <a class="gxxicon-qq" href="tencent://message/?uin=176512025" target="_blank"></a>
+        <a class="gxxicon-weibo" href="http://weibo.com/coolkp" target="_blank"></a>
+        <a class="gxxicon-github" href="https://github.com/coolhihi" target="_blank"></a>
+        <a class="gxxicon-facebook" href="https://www.facebook.com/guanxinxian" target="_blank"></a>
+    </div>
+</div>
+<div class="gxx_sidebar_i">
+    <div class="gxx_summary">
+        {{#get "tags" limit="3" filter="name:'笔记',name:'作品',name:'感悟'" include="count.posts" order="count.posts desc"}}
+            {{#foreach tags}}
+                <dl>
+                    <dt>{{name}}</dt>
+                    <dd>{{count.posts}}</dd>
+                </dl>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>

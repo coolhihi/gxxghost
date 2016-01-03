@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/* google font */
+//@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(http://fonts.useso.com/css?family=Poiret+One|Merriweather:300,700,700italic,300italic|Open+Sans:700,400);
+//@import url(https://fonts.googleapis.com/css?family=Tangerine);
+//@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+@font-face {
+    font-family: 'gxxiconfont';
+    src: url('../font/gxx-iconfont.eot'); /* IE9*/
+    src: url('../font/gxx-iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/gxx-iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/gxx-iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/gxx-iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+[class^="gxxicon-"]:before, [class*=" gxxicon-"]:before {
+    font-family:"gxxiconfont" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.gxxicon-qq:before { content: "\f001d"; }
+.gxxicon-wechat:before { content: "\e61a"; }
+.gxxicon-weibo:before { content: "\e6d3"; }
+.gxxicon-mail:before { content: "\e629"; }
+.gxxicon-github:before { content: "\e735"; }
+.gxxicon-bitbucket:before { content: "\e642"; }
+.gxxicon-facebook:before { content: "\e6bc"; }
+.gxxicon-google:before { content: "\e617"; }
+.gxxicon-search:before { content: "\e615"; }
+.gxxicon-theme:before { content: "\e642"; }
+.gxxicon-top:before { content: "\e632"; }
+.gxxicon-share:before { content: "\e636"; }
+.gxxicon-code:before { content: "\e775"; }
+.gxxicon-code1:before { content: "\e7b5"; }
+.gxxicon-time:before { content: "\e63a"; }
+.gxxicon-comment:before { content: "\e613"; }
+.gxxicon-tag:before { content: "\f005b"; }
+.gxxicon-user:before { content: "\e60a"; }
+.gxxicon-textsize:before { content: "\e699"; }
+.gxxicon-text:before { content: "\e6f5"; }
+.gxxicon-socialcss3:before { content: "\e879"; }
+.gxxicon-h5:before { content: "\e607"; }

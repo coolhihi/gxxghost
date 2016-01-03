@@ -1,0 +1,33 @@
+{{! sidebar }}
+
+<div class="gxx_sidebtn{{^is "post"}} gxx_sidebtn_on{{/is}}"><i class="gxxicon-top"></i></div>
+<div class="gxx_sidebar">
+    {{> custom/owner}}
+    <div class="gxx_sidebar_i">
+        <div class="gxx_sidebar_i_t">热门标签</div>
+        <div class="gxx_sidebar_i_b">
+            {{#get "tags" limit="30" filter="name:-'笔记'+name:-'作品'+name:-'感悟'" include="count.posts" order="count.posts desc"}}
+                {{#foreach tags}}
+                    <a href="/tag/{{slug}}">{{name}}</a>
+                {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+    <div class="gxx_sidebar_i">
+        <div class="gxx_sidebar_i_t">最新评论</div>
+        <div class="gxx_sidebar_i_l">
+            <div class="ds-recent-comments" data-num-items="5" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="36"></div>
+            <script type="text/javascript">
+            var duoshuoQuery = {short_name:gxxconf.duoshuoname};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] 
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+        </div>
+    </div>
+</div>
