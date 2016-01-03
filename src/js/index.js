@@ -49,6 +49,8 @@
             if(localStorage)
                 localStorage.themeindex=index;
         });
+        if(localStorage && typeof(localStorage.themeindex)!=='undefined')
+            $('body').addClass('gxx_theme_'+localStorage.themeindex);
     });
 
     // Arctic Scroll by Paul Adam Davis

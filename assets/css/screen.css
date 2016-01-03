@@ -2693,7 +2693,7 @@ body:not(.post-template) .site-wrapper {
   color: #f5f5f5;
   padding-left: 28px;
   width: 240px;
-  height: 32px;
+  height: 32px !important;
   border-radius: 16px;
   color: #f5f5f5;
   opacity: 0.5;
@@ -2764,7 +2764,7 @@ body:not(.post-template) .site-wrapper {
 }
 .gxx_fixheader .gxx_search {
   margin-top: 7px;
-  height: 26px;
+  height: 26px !important;
 }
 .gxx_fixheader .gxx_search i {
   width: 26px;

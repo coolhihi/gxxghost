@@ -198,7 +198,7 @@ body:not(.post-template){
         color:$framework-search-color;
         padding-left:$framework-search-height - 4px;
         width:$framework-search-width;
-        height:$framework-search-height;
+        height:$framework-search-height !important;
         border-radius:$framework-search-height / 2;
         color:$framework-search-color;
         opacity:0.5;
@@ -269,7 +269,7 @@ body:not(.post-template){
     }
     .gxx_search{
         margin-top:($framework-header-fixheight - $framework-search-fixheight) / 2;
-        height:$framework-search-fixheight;
+        height:$framework-search-fixheight !important;
 
         i{
             width:$framework-search-fixheight;
