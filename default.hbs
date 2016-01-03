@@ -25,10 +25,7 @@
 <body class="{{body_class}}">
     <div class="gxx_header">
         <div class="gxx_header_con clearfix">
-            <div class="gxx_stitle">
-                <div class="gxx_sname">{{@blog.title}}</div>
-                <div class="gxx_ssign">{{@blog.description}}</div>
-            </div>
+            {{> custom/sitetitle}}
             <div class="gxx_search" id="bdcs">
                 <form id="bdcs-search-form" action="http://zhannei.baidu.com/cse/search" method="get" target="_blank">
                     <input name="s" type="hidden" id="bdcs-search-form-sid" value="">
