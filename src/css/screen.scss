@@ -281,7 +281,7 @@ body:not(.post-template){
         }
         input[type="search"],input[type="text"]{
             padding-left:$framework-search-fixheight - 2px;
-            height:$framework-search-fixheight;
+            height:$framework-search-fixheight !important;
             border-radius:$framework-search-fixheight / 2;
             font-size:$framework-search-fixfontsize;
         }

@@ -2776,7 +2776,7 @@ body:not(.post-template) .site-wrapper {
 }
 .gxx_fixheader .gxx_search input[type="search"], .gxx_fixheader .gxx_search input[type="text"] {
   padding-left: 24px;
-  height: 26px;
+  height: 26px !important;
   border-radius: 13px;
   font-size: 12px;
 }
