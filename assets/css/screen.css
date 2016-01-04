@@ -2597,11 +2597,13 @@ body:not(.post-template) .site-wrapper {
 }
 
 .poweredby {
-  margin-right: 4%;
+  margin-right: 9%;
+  width: 40%;
 }
 
 .copyright {
-  margin-left: 4%;
+  margin-left: 9%;
+  width: 40%;
 }
 
 .bdanly a img, .bdanly a:hover img {
