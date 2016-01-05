@@ -2800,6 +2800,7 @@ body:not(.post-template) .site-wrapper {
 
 .gxx_frame {
   width: 100%;
+  margin-top: 30px;
 }
 
 .gxx_frame_con {
@@ -2990,7 +2991,6 @@ body:not(.post-template) .site-wrapper {
   color: #666666;
   font-size: 14px;
   padding: 1px 1px;
-  white-space: nowrap;
 }
 .gxx_sidebar_i_b a:link, .gxx_sidebar_i_b a:visited, .gxx_sidebar_i_b a:active {
   text-decoration: none;

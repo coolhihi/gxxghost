@@ -308,6 +308,7 @@ body:not(.post-template){
 
 .gxx_frame{
     width:100%;
+    margin-top:30px;
 }
 .gxx_frame_con{
     margin:0 auto;
@@ -494,7 +495,7 @@ body:not(.post-template){
         color:#666666;
         font-size:14px;
         padding:1px 1px;
-        white-space:nowrap;
+        //white-space:nowrap;
     }
     a:link,a:visited,a:active{
         text-decoration:none;

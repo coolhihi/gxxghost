@@ -6,7 +6,7 @@
     <div class="gxx_sidebar_i">
         <div class="gxx_sidebar_i_t">热门标签</div>
         <div class="gxx_sidebar_i_b">
-            {{#get "tags" limit="30" filter="name:-'笔记'+name:-'作品'+name:-'感悟'" include="count.posts" order="count.posts desc"}}
+            {{#get "tags" limit="30" filter="name:-'笔记'+name:-'作品'+name:-'杂货'" include="count.posts" order="count.posts desc"}}
                 {{#foreach tags}}
                     <a href="/tag/{{slug}}">{{name}}</a>
                 {{/foreach}}
