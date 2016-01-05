@@ -139,91 +139,71 @@
 }
 
 .gxxicon-qq:before {
-  content: "\f001d";
-}
-
-.gxxicon-wechat:before {
-  content: "\e61a";
-}
-
-.gxxicon-weibo:before {
-  content: "\e6d3";
-}
-
-.gxxicon-mail:before {
-  content: "\e629";
-}
-
-.gxxicon-github:before {
-  content: "\e735";
-}
-
-.gxxicon-bitbucket:before {
-  content: "\e642";
-}
-
-.gxxicon-facebook:before {
-  content: "\e6bc";
-}
-
-.gxxicon-google:before {
-  content: "\e617";
+  content: "\e600";
 }
 
 .gxxicon-search:before {
-  content: "\e615";
-}
-
-.gxxicon-theme:before {
-  content: "\e642";
-}
-
-.gxxicon-top:before {
-  content: "\e632";
+  content: "\e601";
 }
 
 .gxxicon-share:before {
-  content: "\e636";
+  content: "\e602";
 }
 
-.gxxicon-code:before {
-  content: "\e775";
-}
-
-.gxxicon-code1:before {
-  content: "\e7b5";
-}
-
-.gxxicon-time:before {
-  content: "\e63a";
-}
-
-.gxxicon-comment:before {
-  content: "\e613";
+.gxxicon-wechat:before {
+  content: "\e603";
 }
 
 .gxxicon-tag:before {
-  content: "\f005b";
+  content: "\e604";
 }
 
-.gxxicon-user:before {
+.gxxicon-github:before {
+  content: "\e605";
+}
+
+.gxxicon-comment:before {
+  content: "\e606";
+}
+
+.gxxicon-twitter:before {
+  content: "\e607";
+}
+
+.gxxicon-facebook:before {
+  content: "\e608";
+}
+
+.gxxicon-mail:before {
+  content: "\e609";
+}
+
+.gxxicon-top:before {
   content: "\e60a";
 }
 
-.gxxicon-textsize:before {
-  content: "\e699";
+.gxxicon-weibo:before {
+  content: "\e60b";
 }
 
-.gxxicon-text:before {
-  content: "\e6f5";
+.gxxicon-bitbucket:before {
+  content: "\e611";
 }
 
-.gxxicon-socialcss3:before {
-  content: "\e879";
+.gxxicon-theme:before {
+  content: "\e60d";
 }
 
-.gxxicon-h5:before {
-  content: "\e607";
+.gxxicon-time:before {
+  content: "\e60e";
+}
+
+.gxxicon-google:before {
+  content: "\e60f";
+}
+
+.gxxicon-code:before {
+  content: "\e610";
 }
 
 /**
@@ -2910,11 +2890,14 @@ body:not(.post-template) .site-wrapper {
 .gxx_mycontact .gxxicon-weibo {
   background: #E6162D;
 }
+.gxx_mycontact .gxxicon-bitbucket {
+  background: #5F83BB;
+}
 .gxx_mycontact .gxxicon-github {
   background: #91C661;
 }
 .gxx_mycontact .gxxicon-facebook {
-  background: #36518A;
+  background: #45619D;
 }
 
 .gxx_summary {
