@@ -43,9 +43,12 @@
         <div class="gxx_frame_con clearfix">
             {{> sidebar}}
             <div class="site-wrapper">
-
-                {{! Everything else gets inserted here }}
-                {{{body}}}
+                <div class="gxx_pjax">
+                    <!--pjax-start-->
+                    {{! Everything else gets inserted here }}
+                    {{{body}}}
+                    <!--pjax-end-->
+                </div>
 
                 <footer class="site-footer clearfix">
                     <section class="copyright">
@@ -75,9 +78,15 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
+    {{! The jQuery plugin for smooth scroll }}
     <script type="text/javascript" src="{{asset "js/jquery.scrollTo.min.js"}}"></script>
 
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.min.js"}}"></script>
+    {{! The plugin can highlight the code }}
+    <script type="text/javascript" src="{{asset "js/highlight.min.js"}}"></script>
+
+    {{! Pjax }}
+    <script type="text/javascript" src="{{asset "js/pjax.min.js"}}"></script> 
+
     {{! The main JavaScript file for GxxGhost }}
     <script type="text/javascript" src="{{asset "js/index.min.js"}}"></script>
 </body>

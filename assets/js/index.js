@@ -2,21 +2,19 @@
  * Main JS file for GxxGhost
  */
 
-/* globals jQuery, document */
 (function ($, undefined) {
     "use strict";
 
     var $document = $(document);
 
     $document.ready(function () {
-        var $postContent = $(".post-content");
-        $postContent.fitVids();
 
+        //向上箭头
         $('.gxx_gotopbtn').click(function(){
-            console.log('xxx');
             $(document).scrollTo(0,250);
         });
 
+        //滚屏触发头部变化
         $(document).scroll(function(){
             var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
             if(scrollTop<60){
@@ -29,10 +27,9 @@
             }
         });
 
+        //侧栏的收缩
         $('.gxx_sidebtn').click(function(){
-            console.log($(this).hasClass('gxx_sidebtn_on'));
             if($(this).hasClass('gxx_sidebtn_on')){
-                console.log('b');
                 $(this).removeClass('gxx_sidebtn_on');
                 $('.gxx_frame').addClass('gxx_hidesidebar');
             }
@@ -42,6 +39,7 @@
             }
         });
 
+        //主题变更
         $('.gxx_themeselector>li').click(function(){
             var index = $(this).index();
             $(this).addClass('gxx_theme_selected').siblings().removeClass('gxx_theme_selected');
@@ -49,39 +47,62 @@
             if(localStorage)
                 localStorage.themeindex=index;
         });
+        //本地存储已选主题
         if(localStorage && typeof(localStorage.themeindex)!=='undefined')
             $('body').addClass('gxx_theme_'+localStorage.themeindex);
-    });
 
-    // Arctic Scroll by Paul Adam Davis
-    // https://github.com/PaulAdamDavis/Arctic-Scroll
-    $.fn.arctic_scroll = function (options) {
-
-        var defaults = {
-            elem: $(this),
-            speed: 500
-        },
-
-        allOptions = $.extend(defaults, options);
-
-        allOptions.elem.click(function (event) {
-            event.preventDefault();
-            var $this = $(this),
-                $htmlBody = $('html, body'),
-                offset = ($this.attr('data-offset')) ? $this.attr('data-offset') : false,
-                position = ($this.attr('data-position')) ? $this.attr('data-position') : false,
-                toMove;
-
-            if (offset) {
-                toMove = parseInt(offset);
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top + toMove) }, allOptions.speed);
-            } else if (position) {
-                toMove = parseInt(position);
-                $htmlBody.stop(true, false).animate({scrollTop: toMove }, allOptions.speed);
-            } else {
-                $htmlBody.stop(true, false).animate({scrollTop: ($(this.hash).offset().top) }, allOptions.speed);
+        //Disqus
+        function gxxPostInit() {
+            if($('#disqus_thread').length) {
+                if(window.DISQUS) {
+                    DISQUS.reset({
+                        reload: true
+                    });
+                } else {
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = '//' + gxxconf.disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                }
             }
+        }
+        gxxPostInit();
+
+        //代码高亮
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
         });
 
-    };
+        $(document).on('pjax:success', function() {
+            var a = document.createElement('a');
+            a.href = document.URL;
+            var pathname = a.pathname
+                .split('/')
+                .filter(function(value){return !!value})
+                .shift();
+            switch(pathname) {
+                case 'author':
+                case 'tag':
+                case 'page':
+                case undefined:
+                    $('body').removeClass('post-template');
+                    $('body').addClass('home-template');
+                    break;
+                default:
+                    $('body').removeClass('home-template');
+                    $('body').addClass('post-template');
+            }
+            gxxPostInit();
+        });
+
+        //Pjax
+        new Pjax({
+            elements: 'a[href]:not([href^="#"])',
+            selectors: [
+                'title',
+                '.gxx_pjax'
+            ]
+        });
+    });
 })(jQuery);

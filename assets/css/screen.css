@@ -2516,9 +2516,6 @@ input[type="text"], input[type="search"] {
   line-height: normal !important;
 }
 
-/**
- * loop
- */
 .site-wrapper {
   margin-left: 250px;
   transition: all 200ms;
@@ -2796,7 +2793,7 @@ body:not(.post-template) .site-wrapper {
   z-index: 99;
   width: 30px;
   height: 30px;
-  line-height: 30px;
+  line-height: 26px;
   text-align: center;
   border-radius: 15px;
   font-size: 18px;
@@ -3180,8 +3177,15 @@ body:not(.post-template) .site-wrapper {
   text-decoration: none;
 }
 
+.gxx_pagination {
+  margin-bottom: 20px;
+  margin-top: 0;
+  width: 70%;
+  max-width: 2000px;
+}
+
 /**
- * 样式
+ * 主题样式
  */
 .gxx_theme_1 .gxx_header {
   background: #292F36;
@@ -3190,7 +3194,14 @@ body:not(.post-template) .site-wrapper {
   color: #162e49;
 }
 .gxx_theme_1 .post-content blockquote {
-  border-left-color: #556170;
+  border-left-color: #3f4853;
+}
+.gxx_theme_1 .gxx_readmore a:hover {
+  color: #162e49;
+  text-decoration: none;
+}
+.gxx_theme_1 .gxx_readmore a:hover i {
+  background: #162e49;
 }
 
 .gxx_theme_2 .gxx_header {
@@ -3200,7 +3211,14 @@ body:not(.post-template) .site-wrapper {
   color: #006838;
 }
 .gxx_theme_2 .post-content blockquote {
-  border-left-color: #00ce6f;
+  border-left-color: #009b53;
+}
+.gxx_theme_2 .gxx_readmore a:hover {
+  color: #006838;
+  text-decoration: none;
+}
+.gxx_theme_2 .gxx_readmore a:hover i {
+  background: #006838;
 }
 
 .gxx_theme_3 .gxx_header {
@@ -3210,7 +3228,14 @@ body:not(.post-template) .site-wrapper {
   color: #006292;
 }
 .gxx_theme_3 .post-content blockquote {
-  border-left-color: #03a5f5;
+  border-left-color: #0383c2;
+}
+.gxx_theme_3 .gxx_readmore a:hover {
+  color: #006292;
+  text-decoration: none;
+}
+.gxx_theme_3 .gxx_readmore a:hover i {
+  background: #006292;
 }
 
 .gxx_theme_4 .gxx_header {
@@ -3220,7 +3245,14 @@ body:not(.post-template) .site-wrapper {
   color: #720000;
 }
 .gxx_theme_4 .post-content blockquote {
-  border-left-color: #d20606;
+  border-left-color: #a10404;
+}
+.gxx_theme_4 .gxx_readmore a:hover {
+  color: #720000;
+  text-decoration: none;
+}
+.gxx_theme_4 .gxx_readmore a:hover i {
+  background: #720000;
 }
 
 .gxx_themeselector .gxx_theme_1_btn {

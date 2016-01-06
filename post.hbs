@@ -5,18 +5,6 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-
-<!--
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-</header>
--->
-
 <main class="content" role="main">
     <article class="{{post_class}}">
 
@@ -67,53 +55,18 @@
             </section>
             -->
 
-            <!-- 多说最新评论 start -->
-            <section class="post-comments" id="comments">
-                <div class="ds-thread" data-thread-key="{{slug}}" data-title="{{{title}}}" data-url="{{url absolute="true"}}"></div>
-            </section>
-            <!-- 多说最新评论 end -->
+            <div id="disqus_thread"></div>
         </footer>
     </article>
 </main>
 <!--
-<aside class="read-next">
-    {{#next_post}}
-    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
-    {{/next_post}}
+<aside class="pagination gxx_pagination">
     {{#prev_post}}
-    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a>
+    <a class="newer-posts" href="{{url}}" title="{{title}}"">← 上一篇</a>
     {{/prev_post}}
+    {{#next_post}}
+    <a class="older-posts" href="{{url}}" title="{{title}}">下一篇 →</a>
+    {{/next_post}}
 </aside>
 -->
 {{/post}}
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    var duoshuoQuery = {short_name:gxxconf.duoshuoname};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-
-<!-- 代码高亮 start -->
-<script type="text/javascript" src="{{asset "js/highlight.min.js"}}"></script>
-<script type="text/javascript">
-    hljs.initHighlightingOnLoad();
-</script>
-<!-- 代码高亮 end -->

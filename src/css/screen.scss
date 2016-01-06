@@ -45,9 +45,6 @@ input,textarea,select{
 input[type="text"],input[type="search"]{
     line-height:normal !important;
 }
-/**
- * loop
- */
 .site-wrapper{
     margin-left:250px;
     transition:all $animate-speed;
@@ -323,7 +320,7 @@ body:not(.post-template){
     z-index:99;
     width:30px;
     height:30px;
-    line-height:30px;
+    line-height:26px;
     text-align:center;
     border-radius:15px;
     font-size:18px;
@@ -713,8 +710,16 @@ body:not(.post-template){
     text-decoration:none;
 }
 
+.gxx_pagination{
+    margin-bottom:20px;
+    margin-top:0;
+    width:70%;
+    max-width:2000px;
+}
+
+
 /**
- * 样式
+ * 主题样式
  */
 .gxx_theme_1{
     @include themeByColor(#292F36);
