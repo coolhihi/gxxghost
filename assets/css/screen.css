@@ -247,7 +247,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-weight: inherit;
   font-style: inherit;
   font-family: inherit;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -1146,6 +1145,7 @@ a, a:visited, a:active, a:hover {
   top: 72px;
   height: 20px;
   line-height: 20px;
+  overflow: hidden;
   color: #9a9ea3;
   font-size: 12px;
 }
@@ -1646,6 +1646,37 @@ a, a:visited, a:active, a:hover {
 /* ==========================================================================
     Media Queries - Smaller than 900px
    ========================================================================== */
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+
+  .gxx_search {
+    display: none;
+  }
+
+  .gxx_sidebar {
+    display: none;
+  }
+
+  .gxx_sidebar {
+    display: none;
+  }
+
+  .gxx_wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .post {
+    margin-bottom: 16px;
+  }
+}
 /* ==========================================================================
     Media Queries - Smaller than 500px
    ========================================================================== */
+@media only screen and (max-width: 500px) {
+  .gxx_nav {
+    display: none;
+  }
+}

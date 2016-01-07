@@ -5,7 +5,25 @@
    ========================================================================== */
 
 @media only screen and (max-width: 900px) {
-
+    html{
+        font-size:50%;
+    }
+    .gxx_search{
+        display:none;
+    }
+    .gxx_sidebar{
+        display:none;
+    }
+    .gxx_sidebar{
+        display:none;
+    }
+    .gxx_wrapper{
+        width:100%;
+        padding:0;
+    }
+    .post{
+        margin-bottom:16px;
+    }
 }
 
 
@@ -14,5 +32,7 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-
+    .gxx_nav{
+        display:none;
+    }
 }
