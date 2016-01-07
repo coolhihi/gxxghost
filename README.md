@@ -2,7 +2,7 @@
 
 This is a theme for Ghost.
 
-![](https://github.com/coolhihi/gxxghost/raw/master/_doc/xxx.png)
+![](https://github.com/coolhihi/gxxghost/raw/master/_doc/gxxghost-screenshot.png)
 
 ##Preview
 
