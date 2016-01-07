@@ -2,7 +2,7 @@
 
 <div class="gxx_sidebar">
     {{> custom/owner}}
-    {{#get "posts" limit="5" filter="image:-null" order="time desc"}}
+    {{#get "posts" limit="5" filter="image:-null" order="created_at desc"}}
     {{#if posts}}
     <div class="gxx_sidebar_t"><span>图片</span><i></i></div>
     <div class="gxx_sidebar_i">
