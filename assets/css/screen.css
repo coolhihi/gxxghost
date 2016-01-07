@@ -1444,6 +1444,9 @@ a, a:visited, a:active, a:hover {
   font-size: 1.8rem;
   line-height: 2.2rem;
 }
+.post-template .post-content img {
+  max-width: 100%;
+}
 .post-template .post-content h1, .post-template .post-content h2, .post-template .post-content h3,
 .post-template .post-content h4, .post-template .post-content h5, .post-template .post-content h6 {
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
