@@ -1346,6 +1346,31 @@ a, a:visited, a:active, a:hover {
   margin-left: 10px;
 }
 
+.read-more {
+  display: inline-block;
+  padding: 0 10px;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  border-radius: 10px;
+  background: #f5f8f9;
+  color: #565a5f;
+  font-size: 1.2rem;
+  transition: all 250ms;
+  position: relative;
+  top: -2px;
+}
+
+.read-more:link, .read-more:visited, .read-more:active {
+  color: #565a5f;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background: #38B7EA;
+}
+
 /* ==========================================================================
     Pager
    ========================================================================== */

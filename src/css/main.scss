@@ -674,6 +674,28 @@ a,a:visited,a:active,a:hover{
         margin-left:10px;
     }
 }
+.read-more{
+    display:inline-block;
+    padding:0 10px;
+    height:1.4rem;
+    line-height:1.4rem;
+    border-radius:10px;
+    background:$base-bgcolor;
+    color:$base-fontcolor;
+    font-size:1.2rem;
+    transition:all $animate-speed;
+    position:relative;
+    top:-2px;
+}
+.read-more:link,.read-more:visited,.read-more:active{
+    color:$base-fontcolor;
+    text-decoration:none;
+}
+.read-more:hover{
+    color:#ffffff;
+    text-decoration:none;
+    background:$theme-maincolor;
+}
 
 /* ==========================================================================
     Pager
