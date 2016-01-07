@@ -31,8 +31,7 @@
                     <input name="s" type="hidden" id="bdcs-search-form-sid" value="">
                     <input type="search" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" value="" placeholder="搜索" />
                     <input name="entry" type="hidden" value="1">
-                    <i class="gxxicon-search"></i>
-                    <input type="submit" class="gxxicon-top bdcs-search-form-submit" id="bdcs-search-form-submit" value="" />
+                    <input type="submit" class="gxxicon bdcs-search-form-submit" id="bdcs-search-form-submit" value="&#xe601;" />
                 </form>
             </div>
             {{navigation}}
@@ -42,33 +41,24 @@
     <div class="gxx_frame{{#is "post"}} gxx_hidesidebar{{/is}}">
         <div class="gxx_frame_con clearfix">
             {{> sidebar}}
-            <div class="site-wrapper">
-                <div class="gxx_pjax">
-                    <!--pjax-start-->
-                    {{! Everything else gets inserted here }}
-                    {{{body}}}
-                    <!--pjax-end-->
-                </div>
-
-                <footer class="site-footer clearfix">
-                    <section class="copyright">
-                    <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-                    <section class="poweredby">Published with <a href="https://ghost.org">Ghost</a>. Theme by <a href="http://gxxsite.com">COoL</a>
-                    <span class="bdanly">
-                        {{>custom/hm}}
-                    </span></section>
-                </footer>
+            <div class="gxx_wrapper gxx_pjax">
+                <!--pjax-start-->
+                {{! Everything else gets inserted here }}
+                {{{body}}}
+                <!--pjax-end-->
             </div>
         </div>
     </div>
+    <footer class="gxx_footer">
+        <div class="gxx_footer_con clearfix">
+            <section class="gxx_copyright">
+            <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="gxx_poweredby">Powered by <a href="https://ghost.org">Ghost</a>. Theme by <a href="http://gxxsite.com">COoL</a><span class="gxx_bdanly">
+                {{>custom/hm}}
+            </span></section>
+        </div>
+    </footer>
     <div class="gxx_floatlayer">
-        <ul class="gxx_themeselector">
-            <li class="gxx_theme_btn"><i class="gxxicon-theme"></i></li>
-            <li class="gxx_theme_1_btn gxx_theme_selected"><i class="gxxicon-theme"></i></li>
-            <li class="gxx_theme_2_btn"><i class="gxxicon-theme"></i></li>
-            <li class="gxx_theme_3_btn"><i class="gxxicon-theme"></i></li>
-            <li class="gxx_theme_4_btn"><i class="gxxicon-theme"></i></li>
-        </ul>
         <a class="gxx_gotopbtn">
             <i class="gxxicon-top"></i>
         </a>

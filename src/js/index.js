@@ -9,12 +9,13 @@
 
     $document.ready(function () {
 
-        //向上箭头
+        //the top button listener - start
         $('.gxx_gotopbtn').click(function(){
             $(document).scrollTo(0,250);
         });
+        //the top button listener - end
 
-        //滚屏触发头部变化
+        //scroll to change the header style - start
         $(document).scroll(function(){
             var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
             if(scrollTop<60){
@@ -26,32 +27,9 @@
                 $('.gxx_gotopbtn').show();
             }
         });
+        //scroll to change the header style - end
 
-        //侧栏的收缩
-        $('.gxx_sidebtn').click(function(){
-            if($(this).hasClass('gxx_sidebtn_on')){
-                $(this).removeClass('gxx_sidebtn_on');
-                $('.gxx_frame').addClass('gxx_hidesidebar');
-            }
-            else{
-                $(this).addClass('gxx_sidebtn_on');
-                $('.gxx_frame').removeClass('gxx_hidesidebar');
-            }
-        });
-
-        //主题变更
-        $('.gxx_themeselector>li').click(function(){
-            var index = $(this).index();
-            $(this).addClass('gxx_theme_selected').siblings().removeClass('gxx_theme_selected');
-            $('body').removeClass('gxx_theme_1 gxx_theme_2 gxx_theme_3 gxx_theme_4').addClass('gxx_theme_'+index);
-            if(localStorage)
-                localStorage.themeindex=index;
-        });
-        //本地存储已选主题
-        if(localStorage && typeof(localStorage.themeindex)!=='undefined')
-            $('body').addClass('gxx_theme_'+localStorage.themeindex);
-
-        //Disqus
+        //Init when onload or pjax success - start
         function gxxPostInit() {
             if($('#disqus_thread').length) {
                 if(window.DISQUS) {
@@ -65,15 +43,17 @@
                     dsq.src = '//' + gxxconf.disqus_shortname + '.disqus.com/embed.js';
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
                 }
+
+                //代码高亮
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
             }
         }
         gxxPostInit();
+        //Init when onload or pjax success - end
 
-        //代码高亮
-        $('pre code').each(function(i, block) {
-            hljs.highlightBlock(block);
-        });
-
+        //Pjax - start
         $(document).on('pjax:success', function() {
             var a = document.createElement('a');
             a.href = document.URL;
@@ -95,8 +75,6 @@
             }
             gxxPostInit();
         });
-
-        //Pjax
         new Pjax({
             elements: 'a[href]:not([href^="#"])',
             selectors: [
@@ -104,5 +82,6 @@
                 '.gxx_pjax'
             ]
         });
+        //Pjax - end
     });
 })(jQuery);

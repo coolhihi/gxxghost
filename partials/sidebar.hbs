@@ -1,23 +1,33 @@
 {{! sidebar }}
 
-<div class="gxx_sidebtn{{^is "post"}} gxx_sidebtn_on{{/is}}"><i class="gxxicon-top"></i></div>
 <div class="gxx_sidebar">
     {{> custom/owner}}
+    {{#get "posts" limit="5" filter="image:-null" order="time desc"}}
+    {{#if posts}}
+    <div class="gxx_sidebar_t"><span>图片</span><i></i></div>
     <div class="gxx_sidebar_i">
-        <div class="gxx_sidebar_i_t">热门标签</div>
+        <div class="gxx_sidebar_i_img">
+            {{#foreach posts}}
+                <a href="/{{slug}}">
+                    <div class="gxx_sidebar_i_imgi" style="background-image:url('{{image}}')" alt="{{title}}"></div>
+                    <div class="gxx_sidebar_i_imgt">{{title}}</div>
+                    <div class="gxx_sidebar_i_imgd"><i class="gxxicon-time"></i> {{date format="YYYY年MM月DD日"}}</div>
+                </a>
+            {{/foreach}}
+        </div>
+    </div>
+    {{/if}}
+    {{/get}}
+    {{#get "tags" limit="10" filter="name:-'笔记'+name:-'作品'+name:-'杂货'" include="count.posts" order="count.posts desc"}}
+    {{#if tags}}
+    <div class="gxx_sidebar_t"><span>标签</span><i></i></div>
+    <div class="gxx_sidebar_i">
         <div class="gxx_sidebar_i_b">
-            {{#get "tags" limit="30" filter="name:-'笔记'+name:-'作品'+name:-'杂货'" include="count.posts" order="count.posts desc"}}
-                {{#foreach tags}}
-                    <a href="/tag/{{slug}}">{{name}}</a>
-                {{/foreach}}
-            {{/get}}
+            {{#foreach tags}}
+                <a href="/tag/{{slug}}">{{name}} <span>{{count.posts}}</span></a>
+            {{/foreach}}
         </div>
     </div>
-    <!--
-    <div class="gxx_sidebar_i">
-        <div class="gxx_sidebar_i_t">最新评论</div>
-        <div class="gxx_sidebar_i_l" id="GxxRecentComments">
-        </div>
-    </div>
-    -->
+    {{/if}}
+    {{/get}}
 </div>

@@ -1,8 +1,10 @@
 {{! show owner info in sidebar }}
 
 <div class="gxx_sidebar_i">
-    <a class="gxx_myface" href="/author/cool"><img src="/assets/img/myface.png" /></a>
-    <div class="gxx_myname">关鑫贤 / COoL<br /><span>专注前端的全栈工程师</span></div>
+    <a class="gxx_myface" href="/author/cool"><img src="{{asset "img/myface.png"}}" /></a>
+    <div class="gxx_myname"><b>关鑫贤</b><br /><span>前端工程师，全栈斗士</span></div>
+</div>
+<div class="gxx_sidebar_i">
     <div class="gxx_mycontact">
         <a class="gxxicon-mail" href="mailto://master@gxxsite.com" target="_blank"></a>
         <a class="gxxicon-qq" href="tencent://message/?uin=176512025" target="_blank"></a>
@@ -12,15 +14,17 @@
         <a class="gxxicon-facebook" href="https://www.facebook.com/guanxinxian" target="_blank"></a>
     </div>
 </div>
+<!--
 <div class="gxx_sidebar_i">
     <div class="gxx_summary">
         {{#get "tags" limit="3" filter="name:'笔记',name:'作品',name:'杂货'" include="count.posts" order="count.posts desc"}}
             {{#foreach tags}}
                 <dl>
-                    <dt>{{name}}</dt>
                     <dd>{{count.posts}}</dd>
+                    <dt>{{name}}</dt>
                 </dl>
             {{/foreach}}
         {{/get}}
     </div>
 </div>
+-->
