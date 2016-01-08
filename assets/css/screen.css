@@ -1679,7 +1679,46 @@ a, a:visited, a:active, a:hover {
     Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
-  .gxx_nav {
+  body {
+    padding-top: 30px;
+  }
+
+  .gxx_header {
+    height: 40px;
+    border-top-width: 1px;
+  }
+  .gxx_header .gxx_sname {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 0;
+  }
+  .gxx_header .gxx_ssign {
+    margin-left: -100px;
+    opacity: 0;
     display: none;
+  }
+  .gxx_header .gxx_search {
+    margin-top: 7px;
+    height: 26px !important;
+  }
+  .gxx_header .gxx_search input[type="submit"], .gxx_header .gxx_search input[type="button"] {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+  }
+  .gxx_header .gxx_search input[type="search"], .gxx_header .gxx_search input[type="text"] {
+    height: 26px !important;
+    border-radius: 13px;
+    font-size: 12px;
+  }
+  .gxx_header .gxx_nav {
+    line-height: 40px;
+  }
+  .gxx_header .gxx_nav a {
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
   }
 }

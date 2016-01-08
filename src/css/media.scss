@@ -32,7 +32,47 @@
    ========================================================================== */
 
 @media only screen and (max-width: 500px) {
-    .gxx_nav{
-        display:none;
+    body{
+        padding-top:30px;
+    }
+    .gxx_header{
+        height:$framework-header-fixheight;
+        border-top-width:1px;
+        .gxx_sname{
+            font-size:$framework-header-fixnamesize;
+            height:$framework-header-fixheight;
+            line-height:$framework-header-fixheight;
+            margin-top:0;
+        }
+        .gxx_ssign{
+            margin-left:-100px;
+            opacity:0;
+            display:none;
+        }
+        .gxx_search{
+            margin-top:($framework-header-fixheight - $framework-search-fixheight) / 2;
+            height:$framework-search-fixheight !important;
+
+            input[type="submit"],input[type="button"]{
+                width:$framework-search-fixheight;
+                height:$framework-search-fixheight;
+                line-height:$framework-search-fixheight;
+                font-size:$framework-search-fixfontsize;
+            }
+            input[type="search"],input[type="text"]{
+                height:$framework-search-fixheight !important;
+                border-radius:$framework-search-fixheight / 2;
+                font-size:$framework-search-fixfontsize;
+            }
+        }
+        .gxx_nav{
+            line-height:$framework-header-fixheight;
+
+            a{
+                height:$framework-header-fixheight;
+                font-size:$framework-nav-fixfontsize;
+                padding:0 $framework-nav-fixpadding;
+            }
+        }
     }
 }

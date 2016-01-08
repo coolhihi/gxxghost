@@ -2,11 +2,19 @@
 
 This is a theme for Ghost.
 
-![](https://github.com/coolhihi/gxxghost/raw/master/_doc/gxxghost-screenshot.png)
-
 ##Preview
 
 [COoL's Blog](http://blog.gxxsite.com)
+
+![screenshot](https://github.com/coolhihi/gxxghost/raw/master/_doc/gxxghost-screenshot.png)
+
+##Feature
+
+1. use highlightjs to highlight code
+2. use disqus for comments
+3. use pjax
+4. use baidu to handle the search
+5. design by COoL but somethings refer to the icarus theme of hexo and w3cplus
 
 ##Installation
 
