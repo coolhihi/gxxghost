@@ -32,6 +32,10 @@
         //Init when onload or pjax success - start
         function gxxPostInit() {
             if($('#disqus_thread').length) {
+                var disqus_config = function () {
+                    this.page.url = $('#GxxPostUrl').val();  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = $('#GxxPostId').val(); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                }
                 if(window.DISQUS) {
                     DISQUS.reset({
                         reload: true
