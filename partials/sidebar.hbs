@@ -8,7 +8,7 @@
     <div class="gxx_sidebar_i">
         <div class="gxx_sidebar_i_img">
             {{#foreach posts}}
-                <a href="/{{slug}}">
+                <a href="/{{slug}}/">
                     <div class="gxx_sidebar_i_imgi" style="background-image:url('{{image}}')" alt="{{title}}"></div>
                     <div class="gxx_sidebar_i_imgt">{{title}}</div>
                     <div class="gxx_sidebar_i_imgd"><i class="gxxicon-time"></i> {{date format="YYYY年MM月DD日"}}</div>
@@ -24,7 +24,7 @@
     <div class="gxx_sidebar_i">
         <div class="gxx_sidebar_i_b">
             {{#foreach tags}}
-                <a href="/tag/{{slug}}">{{name}} <span>{{count.posts}}</span></a>
+                <a href="/tag/{{slug}}/">{{name}} <span>{{count.posts}}</span></a>
             {{/foreach}}
         </div>
     </div>
