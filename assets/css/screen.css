@@ -1313,6 +1313,7 @@ a, a:visited, a:active, a:hover {
   color: #565a5f;
   font-size: 1.8rem;
   line-height: 2.2rem;
+  word-break: break-all;
 }
 
 .post-meta {
@@ -1443,6 +1444,7 @@ a, a:visited, a:active, a:hover {
   color: #565a5f;
   font-size: 1.8rem;
   line-height: 2.2rem;
+  word-break: break-all;
 }
 .post-template .post-content img {
   max-width: 100%;
