@@ -36,7 +36,7 @@
           _gaq.push(["_trackPageview"])
         }
         if (window.ga) {
-          ga("send", "pageview", {"page": document.URL, "title": document.title})
+          ga("send", "pageview", {"page": location.pathname, "title": document.title})
         }
       }
       this.options.scrollTo = this.options.scrollTo || 0
