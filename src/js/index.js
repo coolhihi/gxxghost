@@ -52,6 +52,15 @@
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
+
+                //百度统计
+                var _hmt = _hmt || [];
+                (function() {
+                    var hm = document.createElement("script");
+                    hm.src = "//hm.baidu.com/hm.js?"+gxxconf.baiduhmid;
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
+                })();
             }
         }
         gxxPostInit();
