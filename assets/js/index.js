@@ -35,6 +35,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', gxxconf.googleanalyticsid, 'auto');
+        ga('send', 'pageview');
 
         //Init when onload or pjax success - start
         function gxxPostInit() {
@@ -59,9 +60,6 @@
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
-
-                //Google Analytics support
-                ga('send', 'pageview');
             }
         }
         gxxPostInit();
