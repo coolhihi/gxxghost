@@ -125,6 +125,7 @@ a,a:visited,a:active,a:hover{
         padding-right:$framework-search-height + 4px;
         width:$framework-search-width;
         height:$framework-search-height !important;
+        line-height:normal !important;
         border-radius:$framework-search-height / 2;
         color:$framework-search-color;
         opacity:0.5;

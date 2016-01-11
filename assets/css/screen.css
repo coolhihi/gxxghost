@@ -802,6 +802,7 @@ a, a:visited, a:active, a:hover {
   padding-right: 36px;
   width: 240px;
   height: 32px !important;
+  line-height: normal !important;
   border-radius: 16px;
   color: #666666;
   opacity: 0.5;
