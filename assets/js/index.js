@@ -59,10 +59,10 @@
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
-
-                //Google Analytics support
-                ga('send', 'pageview');
             }
+
+            //Google Analytics support
+            ga('send', 'pageview');
         }
         gxxPostInit();
         //Init when onload or pjax success - end
