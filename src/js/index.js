@@ -35,6 +35,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', gxxconf.googleanalyticsid, 'auto');
+        ga('send', 'pageview');
 
         //Init when onload or pjax success - start
         function gxxPostInit() {
@@ -60,15 +61,12 @@
                     hljs.highlightBlock(block);
                 });
             }
-
-            //Google Analytics support
-            ga('send', 'pageview');
         }
         gxxPostInit();
         //Init when onload or pjax success - end
 
         //Pjax - start
-        $(document).on('pjax:end', function() {
+        $(document).on('pjax:success', function() {
             var a = document.createElement('a');
             a.href = document.URL;
             var pathname = a.pathname
@@ -87,7 +85,10 @@
                     $('body').removeClass('home-template');
                     $('body').addClass('post-template');
             }
-            gxxPostInit();
+        });
+        $(document).on('pjax:end', function() {
+            //Google Analytics support
+            ga('send', 'pageview');
         });
         new Pjax({
             elements: 'a[href]:not([href^="#"])',
