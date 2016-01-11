@@ -68,7 +68,7 @@
         //Init when onload or pjax success - end
 
         //Pjax - start
-        $(document).on('pjax:success', function() {
+        $(document).on('pjax:end', function() {
             var a = document.createElement('a');
             a.href = document.URL;
             var pathname = a.pathname
