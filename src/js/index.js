@@ -66,8 +66,10 @@
         //Init when onload or pjax success - end
 
         //Pjax - start
-        $(document).on('pjax:end', function() {
-            var pathname = document.location.pathname
+        $(document).on('pjax:success', function() {
+            var a = document.createElement('a');
+            a.href = document.URL;
+            var pathname = a.pathname
                 .split('/')
                 .filter(function(value){return !!value})
                 .shift();
@@ -83,6 +85,7 @@
                     $('body').removeClass('home-template');
                     $('body').addClass('post-template');
             }
+            gxxPostInit();
         });
         new Pjax({
             elements: 'a[href]:not([href^="#"])',

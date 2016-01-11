@@ -36,7 +36,7 @@
           _gaq.push(["_trackPageview"])
         }
         if (window.ga) {
-          ga("send", "pageview", {"page": options.url, "title": options.title})
+          ga("send", "pageview", {"page": document.URL, "title": document.title})
         }
       }
       this.options.scrollTo = this.options.scrollTo || 0
@@ -471,7 +471,7 @@
         // Fire Events
         Pjax.trigger(document,"pjax:complete pjax:success", options)
 
-        options.analytics()
+        options.analytics(options)
 
         // Scroll page to top on new page load
         if (options.scrollTo !== false) {
