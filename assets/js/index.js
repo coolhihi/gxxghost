@@ -29,14 +29,24 @@
         });
         //scroll to change the header style - end
         
-        //
+        //google analytics init - start
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', gxxconf.googleanalyticsid, 'auto');
         ga('send', 'pageview');
+        //google analytics init - end
 
+        //disqus count init - start
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.id="dsq-count-scr";
+        dsq.async = true;
+        dsq.src = '//' + gxxconf.disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        //disqus count init - end
+        
         //Init when onload or pjax success - start
         function gxxPostInit() {
             if($('#disqus_thread').length) {
@@ -61,6 +71,10 @@
                     hljs.highlightBlock(block);
                 });
             }
+
+            //刷新评论数
+            window.DISQUSWIDGETS = undefined;
+            $.getScript("http://" + gxxconf.disqus_shortname + ".disqus.com/count.js");
         }
         gxxPostInit();
         //Init when onload or pjax success - end

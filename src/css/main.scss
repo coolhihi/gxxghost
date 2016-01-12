@@ -298,14 +298,14 @@ a,a:visited,a:active,a:hover{
     display:inline-block;
     width:$framework-sidebar-width;
     box-shadow:$base-shadow;
-    overflow:hidden;
+    overflow:visibility;
 }
 .gxx_sidebar_i{
     float:left;
     width:100%;
     background:#ffffff;
     text-align:center;
-    overflow:hidden;
+    overflow:visibility;
     border-bottom:1px solid #eeeeee;
 }
 .gxx_sidebar_i:last-child{
@@ -364,6 +364,19 @@ a,a:visited,a:active,a:hover{
         text-decoration:none;
         color:$theme-maincolor;
         transform:scale(1,1);
+    }
+    a[title]:hover:after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+        top: 107%;
+        z-index: 20;
+        white-space: nowrap;
+        background:rgba($base-fontcolor,0.9);
+        padding: 4px 10px;
+        color: #fff;
+        font-size: 14px;
+        line-height:18px;
     }
 }
 .gxx_sidebar_t{
@@ -669,12 +682,21 @@ a,a:visited,a:active,a:hover{
     }
     i{
         position:relative;
-        top:-2px;
+        top:-1px;
+        font-size:1.8rem;
     }
     .post-date{
         border-left:1px solid #dddddd;
         padding-left:10px;
         margin-left:10px;
+    }
+    .post-comment{
+        display:inline-block;
+        border-left:1px solid #dddddd;
+        padding-left:10px;
+        margin-left:10px;
+        color:#9a9ea3;
+        text-decoration:none;
     }
 }
 .read-more{
