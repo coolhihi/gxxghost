@@ -18,16 +18,17 @@
     </div>
     {{/if}}
     {{/get}}
-    {{#get "tags" limit="10" filter="name:-'笔记'+name:-'作品'+name:-'杂货'" include="count.posts" order="count.posts desc"}}
+    {{#get "tags" limit="30" filter="name:-'笔记'+name:-'作品'+name:-'杂货'" include="count.posts" order="count.posts desc"}}
     {{#if tags}}
     <div class="gxx_sidebar_t"><span>标签</span><i></i></div>
     <div class="gxx_sidebar_i">
-        <div class="gxx_sidebar_i_b">
+        <div class="gxx_sidebar_i_b" id="GxxSidebarTags">
             {{#foreach tags}}
                 <a href="/tag/{{slug}}/">{{name}} <span>{{count.posts}}</span></a>
             {{/foreach}}
         </div>
     </div>
+    <div class="gxx_sidebar_more"><i class="gxxicon-top"></i></div>
     {{/if}}
     {{/get}}
 </div>

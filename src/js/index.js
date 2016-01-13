@@ -14,6 +14,23 @@
             $(document).scrollTo(0,250);
         });
         //the top button listener - end
+        
+        //more tag button listener - start
+        if($('#GxxSidebarTags a').length>gxxconf.showtag){
+            $('#GxxSidebarTags a:gt(9)').addClass('gxx_sidebar_tag_hidden');
+            $('.gxx_sidebar_more').show().click(function(){
+                var $btn=$(this);
+                if($btn.hasClass('gxx_sidebar_more_active')){
+                    $btn.removeClass('gxx_sidebar_more_active');
+                    $('#GxxSidebarTags a:gt('+(gxxconf.showtag-1)+')').addClass('gxx_sidebar_tag_hidden');
+                }
+                else{
+                    $btn.addClass('gxx_sidebar_more_active');
+                    $('#GxxSidebarTags a:gt('+(gxxconf.showtag-1)+')').removeClass('gxx_sidebar_tag_hidden');
+                }
+            });
+        }
+        //more tag button listener - end
 
         //scroll to change the header style - start
         $(document).scroll(function(){
