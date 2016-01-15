@@ -544,12 +544,12 @@ module.exports = function(options){
     // options.backward or options.foward can be true or undefined
     // by default, we do track back/foward hit
     // https://productforums.google.com/forum/#!topic/analytics/WVwMDjLhXYk
-    if (window._gaq) {
-      _gaq.push(["_trackPageview"])
-    }
-    if (window.ga) {
-      ga("send", "pageview", {page: options.url, title: options.title})
-    }
+    //if (window._gaq) {
+    //  _gaq.push(["_trackPageview"])
+    //}
+    //if (window.ga) {
+    //  ga("send", "pageview", {page: options.url, title: options.title})
+    //}
   }
   this.options.scrollTo = (typeof this.options.scrollTo === 'undefined') ? 0 : this.options.scrollTo;
   this.options.debug = this.options.debug || false
