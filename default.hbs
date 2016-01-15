@@ -53,9 +53,7 @@
         <div class="gxx_footer_con clearfix">
             <section class="gxx_copyright">
             <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="gxx_poweredby">Powered by <a href="https://ghost.org">Ghost</a>. Theme by <a href="http://gxxsite.com">COoL</a><span class="gxx_bdanly">
-                {{>custom/hm}}
-            </span></section>
+            <section class="gxx_poweredby">Powered by <a href="https://ghost.org">Ghost</a>. Theme by <a href="http://gxxsite.com">COoL</a></section>
         </div>
     </footer>
     <div class="gxx_floatlayer">
@@ -64,7 +62,7 @@
         </a>
     </div>
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="http://libs.useso.com/js/jquery/1.11.1-rc2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></script>
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 

@@ -29,23 +29,23 @@ This is a theme for Ghost.
 
 1. Blog title
 
-    edit this file `partials/sitetitle.hbs`
+    edit this file `partials/custom/sitetitle.hbs`
 
 2. Owner info in sidebar
 
-    edit this file `partials/owner.hbs`
+    edit this file `partials/custom/owner.hbs`
     
 3. add or edit `<meta>`
 
-    edit this file `partials/meta.hbs`
+    edit this file `partials/custom/meta.hbs`
 
 4. because ghost do not have folder, show I make hidden tags to do this, the hidden tags should not show in sidebar. so edit `partials/sitebar` to change the my 3 chinese words
     
 5. change the disqus short_name and baidu search sid
 
-    edit this file `partials/config.hbs`
+    edit this file `partials/custom/config.hbs`
     
-6. you can delete the `partials/hm.hbs` or use it.
+6. you can delete the `partials/custom/hm.hbs` or use it.
     
 ##Use
 
