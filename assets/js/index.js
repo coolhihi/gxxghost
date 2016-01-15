@@ -93,7 +93,7 @@
             $.getScript("http://" + gxxconf.disqus_shortname + ".disqus.com/count.js");
 
             //发送更新通知到google analytics
-            ga("send", "pageview");
+            ga("send", "pageview", {"page": location.pathname, "title": document.title});
         }
         gxxPostInit();
         //Init when onload or pjax success - end
