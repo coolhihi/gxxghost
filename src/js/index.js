@@ -52,7 +52,6 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', gxxconf.googleanalyticsid, 'auto');
-        ga('send', 'pageview');
         //google analytics init - end
 
         //disqus count init - start
@@ -92,6 +91,9 @@
             //刷新评论数
             window.DISQUSWIDGETS = undefined;
             $.getScript("http://" + gxxconf.disqus_shortname + ".disqus.com/count.js");
+
+            //发送更新通知到google analytics
+            ga("send", "pageview");
         }
         gxxPostInit();
         //Init when onload or pjax success - end
