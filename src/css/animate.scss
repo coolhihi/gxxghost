@@ -27,26 +27,3 @@
   from { opacity: 1; }
   to { opacity: 0; }
 }
-
-@keyframes eye-looking{
-  0% {
-    transform:translate(0,0);
-  }
-  50% {
-    transform:translate(-100%,0);
-  }
-  100% {
-    transform:translate(0,0);
-  }
-}
-@keyframes eye-looking-v{
-  0% {
-    transform:translate(0,0);
-  }
-  50% {
-    transform:translate(0,-100%);
-  }
-  100% {
-    transform:translate(0,0);
-  }
-}

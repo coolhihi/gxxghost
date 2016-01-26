@@ -5,79 +5,43 @@
    ========================================================================== */
 
 
-$base-bgcolor:#f5f8f9;/*留*/
-$base-fontcolor:#565a5f;/*留*/
-$base-fontfamily:'Hiragino Sans GB',Helvetica,Arial,'Microsoft Yahei',sans-serif;/*留*/
-$base-maxwidth:1200px;/*留*/
-$base-shadow:0px 1px 3px rgba(0,0,0,0.1);/*留*/
+$base-bgcolor:#f5f8f9;
+$base-fontcolor:#565a5f;
+$base-fontfamily:'Hiragino Sans GB',Helvetica,Arial,'Microsoft Yahei',sans-serif;
+$base-maxwidth:1200px;
+$base-shadow:0px 1px 3px rgba(0,0,0,0.1);
 
-$theme-maincolor:#38B7EA;/*留*/
+$theme-maincolor:#38B7EA;
 
 /* animate */
-$animate-speed:250ms;/*留*/
+$animate-speed:250ms;
 
 /* framework */
-$framework-header-height:70px;/*留*/
-$framework-header-fixheight:40px;/*留*/
-$framework-header-bg:#ffffff;/*留*/
-$framework-header-fixbg:#ffffff;/*留*/
-$framework-header-color:#000000;
-$framework-header-fontsize:36px;
-$framework-header-border:0;/*留*/
-$framework-header-namesize:24px;
-$framework-header-fixnamesize:18px;
-$framework-header-signsize:14px;
-$framework-header-fixsignsize:14px;
+$framework-header-height:70px;
+$framework-header-fixheight:40px;
+$framework-header-bg:#ffffff;
+$framework-header-fixbg:#ffffff;
 
 $framework-search-width:240px;
 $framework-search-height:32px;
 $framework-search-fixheight:26px;
-$framework-search-bg:none;
-$framework-search-border:1px solid #dddddd;
-$framework-search-fontsize:14px;
-$framework-search-fixfontsize:12px;
-$framework-search-color:#666666;
 
-$framework-nav-fontsize:18px;/*留*/
-$framework-nav-fixfontsize:16px;/*留*/
-$framework-nav-padding:20px;/*留*/
-$framework-nav-fixpadding:10px;/*留*/
-$framework-nav-line:12px;
+$framework-nav-fontsize:18px;
+$framework-nav-fixfontsize:16px;
+$framework-nav-padding:20px;
+$framework-nav-fixpadding:10px;
 
-$framework-footer-height:22px;
-$framework-footer-bg:#ffffff;/*留*/
-$framework-footer-border:1px solid #dddddd;/*留*/
-$framework-footer-fontsize:12px;
-$framework-footer-color:#666666;
+$framework-footer-bg:#ffffff;
+$framework-footer-border:1px solid #dddddd;
 
-$framework-sidebar-width:22%;/*留*/
+$framework-sidebar-width:22%;
 
-$framework-content-width:100% - $framework-sidebar-width;/*留*/
+$framework-content-width:100% - $framework-sidebar-width;
 
-$framework-sidebar-bg:#f5f5f5;
-$framework-sidebar-border:1px solid #dddddd;
-$framework-sidebar-radius:4px;
 
-$framework-sidebar-facesize:50%;/*留*/
-
-$framework-sidebar-nameheight:24px;
-$framework-sidebar-namesize:20px;/*留*/
-$framework-sidebar-namecolor:$base-fontcolor;/*留*/
-$framework-sidebar-signsize:14px;/*留*/
-$framework-sidebar-signcolor:lighten($base-fontcolor,10%);/*留*/
-$framework-sidebar-iconsize:28px;/*留*/
-$framework-sidebar-bg:#f5f5f5;
-
-$framework-sidebar-title-height:36px;
-$framework-sidebar-title-fontsize:16px;
-$framework-sidebar-title-fontcolor:#333333;
-
-$framework-sidebar-list-height:30px;
-$framework-sidebar-list-fontsize:14px;
-$framework-sidebar-list-fontcolor:#666666;
-$framework-sidebar-list-fontcolor-on:#333333;
-
-$framework-floatlayer-btnheight:48px;
-$framework-floatlayer-btnbg:#ffffff;
-$framework-floatlayer-btncolor:$theme-maincolor;
-$framework-floatlayer-btnsize:24px;
+$framework-sidebar-facesize:50%;
+$framework-sidebar-namesize:20px;
+$framework-sidebar-namecolor:$base-fontcolor;
+$framework-sidebar-signsize:14px;
+$framework-sidebar-signcolor:lighten($base-fontcolor,10%);
+$framework-sidebar-iconsize:28px;
