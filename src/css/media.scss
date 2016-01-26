@@ -39,7 +39,7 @@
         height:$framework-header-fixheight;
         border-top-width:1px;
         .gxx_sname{
-            font-size:$framework-header-fixnamesize;
+            font-size:18px;
             height:$framework-header-fixheight;
             line-height:$framework-header-fixheight;
             margin-top:0;
@@ -57,12 +57,12 @@
                 width:$framework-search-fixheight;
                 height:$framework-search-fixheight;
                 line-height:$framework-search-fixheight;
-                font-size:$framework-search-fixfontsize;
+                font-size:12px;
             }
             input[type="search"],input[type="text"]{
                 height:$framework-search-fixheight !important;
                 border-radius:$framework-search-fixheight / 2;
-                font-size:$framework-search-fixfontsize;
+                font-size:12px;
             }
         }
         .gxx_nav{

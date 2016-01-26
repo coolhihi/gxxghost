@@ -16,21 +16,17 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     del = require('del');
-// font
-gulp.task('font', function(){
-  return gulp.src('src/font/**/*')
-    .pipe(gulp.dest('assets/font'))
-    .pipe(notify({ message: 'font task complete' }));
-});
 // css
 gulp.task('css', function() {
   return sass('src/css/screen.scss',{ style: 'expanded' })
+    .on('error',notify.onError(function (error) {return 'Sass error!'}))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+    .on('error',notify.onError(function (error) {return 'Sass error!'}))
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('assets/css'))
-    .pipe(notify({ message: 'css task complete' }));
+    .on('error',notify.onError(function (error) {return 'Sass error!'}))
+    .pipe(gulp.dest('assets/css'));
 });
 // js
 gulp.task('js', function() {
@@ -39,15 +35,21 @@ gulp.task('js', function() {
     .pipe(gulp.dest('assets/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'))
-    .pipe(notify({ message: 'js task complete' }));
+    .on('error',notify.onError(function (error) {return 'Js error!'}))
+    .pipe(gulp.dest('assets/js'));
+});
+// font
+gulp.task('font', function(){
+  return gulp.src('src/font/**/*')
+    .on('error',notify.onError(function (error) {return 'Font error!'}))
+    .pipe(gulp.dest('assets/font'));
 });
 // img
 gulp.task('img', function() {
   return gulp.src('src/img/**/*')
     //.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('assets/img'))
-    .pipe(notify({ message: 'img task complete' }));
+    .on('error',notify.onError(function (error) {return 'Img error!'}))
+    .pipe(gulp.dest('assets/img'));
 });
 // Watch
 gulp.task('watch', function() {

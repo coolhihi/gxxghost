@@ -49,7 +49,7 @@ a,a:visited,a:active,a:hover{
     height:$framework-header-height;
     line-height:$framework-header-height;
     background:$framework-header-bg;
-    color:$framework-header-color;
+    color:#000000;
     border-top:3px solid $theme-maincolor;
     transition:height $animate-speed;
     box-shadow:$base-shadow;
@@ -68,7 +68,7 @@ a,a:visited,a:active,a:hover{
     font-weight:400;
     margin-top:16px;
     padding-left:10px;
-    font-size:$framework-header-namesize;
+    font-size:24px;
     height:($framework-header-height - 20px)/2;
     line-height:($framework-header-height - 20px)/2;
     transition:all $animate-speed;
@@ -79,7 +79,7 @@ a,a:visited,a:active,a:hover{
     font-family: 'Poiret One', cursive;
     font-weight:400;
     padding-left:10px;
-    font-size:$framework-header-signsize;
+    font-size:14px;
     height:($framework-header-height - 20px)/2;
     line-height:($framework-header-height - 20px)/3;
     transition:all $animate-speed;
@@ -102,8 +102,8 @@ a,a:visited,a:active,a:hover{
         width:$framework-search-height;
         height:$framework-search-height;
         line-height:$framework-search-height;
-        color:$framework-search-color;
-        font-size:$framework-search-fontsize + 2px;
+        color:#666666;
+        font-size:16px;
         transition:opacity $animate-speed;
         border:none;
         background:none;
@@ -117,22 +117,22 @@ a,a:visited,a:active,a:hover{
         left:0;
         z-index:8;
         box-sizing:border-box;
-        font-size:$framework-search-fontsize;
-        background:$framework-search-bg;
-        border:$framework-search-border;
-        color:$framework-search-color;
+        font-size:14px;
+        background:none;
+        border:1px solid #dddddd;
+        color:#666666;
         padding-left:14px;
         padding-right:$framework-search-height + 4px;
         width:$framework-search-width;
         height:$framework-search-height !important;
         line-height:normal !important;
         border-radius:$framework-search-height / 2;
-        color:$framework-search-color;
+        color:#666666;
         opacity:0.5;
         transition:all $animate-speed;
     }
     input[type="search"]::-webkit-input-placeholder,input[type="text"]::-webkit-input-placeholder{
-        color:lighten($framework-search-color,20%);
+        color:lighten(#666666,20%);
     }
     input[type="search"]:hover,
     input[type="text"]:hover,
@@ -180,7 +180,7 @@ a,a:visited,a:active,a:hover{
     height:$framework-header-fixheight;
     border-top-width:1px;
     .gxx_sname{
-        font-size:$framework-header-fixnamesize;
+        font-size:18px;
         height:$framework-header-fixheight;
         line-height:$framework-header-fixheight;
         margin-top:0;
@@ -197,12 +197,12 @@ a,a:visited,a:active,a:hover{
             width:$framework-search-fixheight;
             height:$framework-search-fixheight;
             line-height:$framework-search-fixheight;
-            font-size:$framework-search-fixfontsize;
+            font-size:12px;
         }
         input[type="search"],input[type="text"]{
             height:$framework-search-fixheight !important;
             border-radius:$framework-search-fixheight / 2;
-            font-size:$framework-search-fixfontsize;
+            font-size:12px;
         }
     }
     .gxx_nav{
@@ -326,7 +326,7 @@ a,a:visited,a:active,a:hover{
     display:inline-block;
     width:100%;
     margin-bottom:20px;
-    line-height:$framework-sidebar-nameheight;
+    line-height:24px;
     font-size:$framework-sidebar-namesize;
 
     b{
@@ -588,17 +588,17 @@ a,a:visited,a:active,a:hover{
     display:none;
     float:left;
     cursor:pointer;
-    background:$framework-floatlayer-btnbg;
+    background:#ffffff;
     border:1px solid $theme-maincolor;
     text-align:center;
-    width:$framework-floatlayer-btnheight;
-    height:$framework-floatlayer-btnheight;
-    line-height:$framework-floatlayer-btnheight - 4px;
-    color:$framework-floatlayer-btncolor;
-    font-size:$framework-floatlayer-btnsize;
+    width:48px;
+    height:48px;
+    line-height:44px;
+    color:$theme-maincolor;
+    font-size:24px;
 }
 .gxx_gotopbtn:link,.gxx_gotopbtn:visited,.gxx_gotopbtn:active,.gxx_gotopbtn:hover{
-    color:$framework-floatlayer-btncolor;
+    color:$theme-maincolor;
     text-decoration:none;
 }
 

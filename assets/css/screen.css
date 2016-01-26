@@ -21,34 +21,8 @@
 /* ==========================================================================
     Variables
    ========================================================================== */
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
 /* animate */
-/*留*/
 /* framework */
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
-/*留*/
 /* ==========================================================================
     Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
@@ -532,146 +506,91 @@ body.nav-opened .site-wrapper {
     opacity: 0;
   }
 }
-@-webkit-keyframes eye-looking {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-@keyframes eye-looking {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-@-webkit-keyframes eye-looking-v {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
-@keyframes eye-looking-v {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  50% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-}
 /* ==========================================================================
     Code Highlight Style
    ========================================================================== */
 /*
 
-Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
 
 */
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #23241f;
+  background: #002b36;
+  color: #839496;
 }
 
-.hljs,
-.hljs-tag,
-.hljs-subst {
-  color: #f8f8f2;
+.hljs-comment,
+.hljs-quote {
+  color: #586e75;
 }
 
-.hljs-strong,
-.hljs-emphasis {
-  color: #a8a8a2;
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
 }
 
-.hljs-bullet,
-.hljs-quote,
+/* Solarized Cyan */
 .hljs-number,
-.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
 .hljs-literal,
-.hljs-link {
-  color: #ae81ff;
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
 }
 
-.hljs-code,
+/* Solarized Blue */
 .hljs-title,
 .hljs-section,
+.hljs-name,
+.hljs-selector-id,
 .hljs-selector-class {
-  color: #a6e22e;
+  color: #268bd2;
 }
 
-.hljs-strong {
-  font-weight: bold;
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #073642;
 }
 
 .hljs-emphasis {
   font-style: italic;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-name,
-.hljs-attr {
-  color: #f92672;
-}
-
-.hljs-symbol,
-.hljs-attribute {
-  color: #66d9ef;
-}
-
-.hljs-params,
-.hljs-class .hljs-title {
-  color: #f8f8f2;
-}
-
-.hljs-string,
-.hljs-type,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-selector-id,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-variable {
-  color: #e6db74;
-}
-
-.hljs-comment,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e;
+.hljs-strong {
+  font-weight: bold;
 }
 
 /* ==========================================================================
