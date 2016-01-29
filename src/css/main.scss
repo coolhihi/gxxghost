@@ -932,14 +932,12 @@ a,a:visited,a:active,a:hover{
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             margin: 0 0 1.75em 0;
-            border: #E3EDF3 1px solid;
+            border: #dddddd 10px solid;
             width: 100%;
-            padding: 10px;
             font-family: Inconsolata, monospace, sans-serif;
             font-size: 0.9em;
             white-space: pre;
             overflow: auto;
-            background: #3f3f3f;
             border-radius: 5px;
         }
 
@@ -947,8 +945,6 @@ a,a:visited,a:active,a:hover{
             font-size: inherit;
             white-space: pre-wrap;
             border: none;
-            padding: 0;
-            background: #3f3f3f;
         }
 
         kbd {
