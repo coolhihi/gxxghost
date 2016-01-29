@@ -1,3 +1,5 @@
+[中文介绍](https://github.com/coolhihi/gxxghost/blob/master/README.zh-cn.md)
+
 # GxxGhost
 
 This is a theme for Ghost.
@@ -39,13 +41,11 @@ This is a theme for Ghost.
 
     edit this file `partials/custom/meta.hbs`
 
-4. because ghost do not have folder, show I make hidden tags to do this, the hidden tags should not show in sidebar. so edit `partials/sitebar` to change the my 3 chinese words
+4. because ghost do not have folder, so I make hidden tags to do this, the hidden tags should not show in sidebar. so edit `partials/sitebar` to change the my 3 chinese words
     
-5. change the disqus short_name and baidu search sid
+5. change disqus's shortname, baidu search sid, google analytics id
 
     edit this file `partials/custom/config.hbs`
-    
-6. you can delete the `partials/custom/hm.hbs` or use it.
     
 ##Use
 
