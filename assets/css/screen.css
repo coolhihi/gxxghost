@@ -1601,7 +1601,15 @@ a, a:visited, a:active, a:hover {
    ========================================================================== */
 @media only screen and (max-width: 1300px) {
   html {
-    font-size: 50%;
+    font-size: 54%;
+  }
+
+  .post-meta {
+    padding-top: 6px;
+  }
+
+  .post-excerpt {
+    padding-top: 0.8rem;
   }
 }
 /* ==========================================================================
