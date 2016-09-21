@@ -27,11 +27,14 @@
         <div class="gxx_header_con clearfix">
             {{> custom/sitetitle}}
             <div class="gxx_search" id="bdcs">
-                <form id="bdcs-search-form" action="http://zhannei.baidu.com/cse/search" method="get" target="_blank">
-                    <input name="s" type="hidden" id="bdcs-search-form-sid" value="">
-                    <input type="search" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" value="" placeholder="搜索" />
-                    <input name="entry" type="hidden" value="1">
-                    <input type="submit" class="gxxicon bdcs-search-form-submit" id="bdcs-search-form-submit" value="&#xe601;" />
+                <form action="http://www.google.com/search" method="get" target="_blank">
+                    <input type="search" name="q" value="" placeholder="搜索" />
+                    <input type="hidden" name="ie" value="GB2312" />
+                    <input type="hidden" name="oe" value="GB2312" />
+                    <input type="hidden" name="hl" value="zh-CN" />
+                    <input type="hidden" name="domains" value="http://blog.gxxsite.com" />
+                    <input type="hidden" name="sitesearch" value="blog.gxxsite.com" />
+                    <input type="submit" class="gxxicon" value="&#xe601;" />
                 </form>
             </div>
             {{navigation}}
