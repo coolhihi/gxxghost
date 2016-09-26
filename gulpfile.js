@@ -25,7 +25,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .on('error',notify.onError(function (error) {return 'Sass error!'}))
+    .on('error',notify.onError(function (error) {return 'Sass error on min!'}))
     .pipe(gulp.dest('assets/css'));
 });
 // js

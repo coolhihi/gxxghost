@@ -47,11 +47,13 @@
         //scroll to change the header style - end
         
         //baidu zhannei search - start
+        /*
         document.getElementById('bdcs-search-form-sid').value=gxxconf.bdznsid;
         var bdcs = document.createElement('script');
         bdcs.type = 'text/javascript';bdcs.async = true;
         bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=' + gxxconf.bdznsid + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bdcs);
+        */
         //baidu zhannei search - end
 
         //google analytics init - start
