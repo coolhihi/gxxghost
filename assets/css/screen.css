@@ -719,7 +719,6 @@ a, a:visited, a:active, a:hover {
   line-height: 32px;
   color: #666666;
   font-size: 16px;
-  transition: opacity 250ms;
   border: none;
   background: none;
   opacity: 0.5;
@@ -743,7 +742,6 @@ a, a:visited, a:active, a:hover {
   border-radius: 16px;
   color: #666666;
   opacity: 0.5;
-  transition: all 250ms;
 }
 .gxx_search input[type="search"]::-webkit-input-placeholder, .gxx_search input[type="text"]::-webkit-input-placeholder {
   color: #999999;

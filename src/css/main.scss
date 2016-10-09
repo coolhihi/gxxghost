@@ -104,7 +104,7 @@ a,a:visited,a:active,a:hover{
         line-height:$framework-search-height;
         color:#666666;
         font-size:16px;
-        transition:opacity $animate-speed;
+        // transition:opacity $animate-speed;
         border:none;
         background:none;
         opacity:0.5;
@@ -129,7 +129,7 @@ a,a:visited,a:active,a:hover{
         border-radius:$framework-search-height / 2;
         color:#666666;
         opacity:0.5;
-        transition:all $animate-speed;
+        // transition:all $animate-speed;
     }
     input[type="search"]::-webkit-input-placeholder,input[type="text"]::-webkit-input-placeholder{
         color:lighten(#666666,20%);
