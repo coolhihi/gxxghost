@@ -686,7 +686,6 @@ a, a:visited, a:active, a:hover {
   font-size: 24px;
   height: 25px;
   line-height: 25px;
-  transition: all 250ms;
 }
 
 .gxx_ssign {
@@ -698,7 +697,6 @@ a, a:visited, a:active, a:hover {
   font-size: 14px;
   height: 25px;
   line-height: 16.66667px;
-  transition: all 250ms;
 }
 
 .gxx_search {
@@ -779,7 +777,6 @@ a, a:visited, a:active, a:hover {
   color: #565a5f;
   background: #ffffff;
   padding: 0 20px;
-  transition: all 250ms;
 }
 .gxx_nav a:link, .gxx_nav a:visited, .gxx_nav a:active {
   text-decoration: none;

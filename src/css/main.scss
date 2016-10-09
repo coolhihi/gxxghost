@@ -71,7 +71,7 @@ a,a:visited,a:active,a:hover{
     font-size:24px;
     height:($framework-header-height - 20px)/2;
     line-height:($framework-header-height - 20px)/2;
-    transition:all $animate-speed;
+    //transition:all $animate-speed;
 }
 .gxx_ssign{
     float:left;
@@ -82,7 +82,7 @@ a,a:visited,a:active,a:hover{
     font-size:14px;
     height:($framework-header-height - 20px)/2;
     line-height:($framework-header-height - 20px)/3;
-    transition:all $animate-speed;
+    //transition:all $animate-speed;
 }
 .gxx_search{
     float:left;
@@ -163,7 +163,7 @@ a,a:visited,a:active,a:hover{
         color:$base-fontcolor;
         background:$framework-header-bg;
         padding:0 $framework-nav-padding;
-        transition:all $animate-speed;
+        //transition:all $animate-speed;
     }
     a:link,a:visited,a:active{
         text-decoration:none;
