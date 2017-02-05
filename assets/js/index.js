@@ -104,6 +104,16 @@
 
             //发送更新通知到google analytics
             ga("send", "pageview", {"page": location.pathname, "title": document.title});
+
+            //推送网址给百度
+            var bpurl = '';
+            if (window.location.protocol.split(':')[0] === 'https') {
+                bpurl = 'https://zz.bdstatic.com/linksubmit/push.js';        
+            }
+            else {
+                bpurl = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            $.getScript(bpurl);
         }
         gxxPostInit();
         //Init when onload or pjax success - end
