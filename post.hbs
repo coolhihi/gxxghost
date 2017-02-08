@@ -6,10 +6,10 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 <main class="content" role="main">
-    <article class="{{post_class}}">
-        <header class="post-header">
+    <div class="{{post_class}}">
+        <div class="post-header">
             {{{title}}}
-        </header>
+        </div>
         <div class="post-meta">
             <i class="gxxicon-tag"></i>
             {{tags prefix=" "}}
@@ -17,16 +17,16 @@
             <div class="post-comment"><i class="gxxicon-comment"></i> <a href="{{url}}#disqus_thread"></a></div>
         </div>
 
-        <section class="post-content">
+        <div class="post-content">
             {{content}}
-        </section>
+        </div>
 
         <footer class="post-footer">
             <input type="hidden" id="GxxPostUrl" value="{{url}}" />
             <input type="hidden" id="GxxPostId" value="ghost-{{id}}" />
             <div id="disqus_thread"></div>
         </footer>
-    </article>
+    </div>
 </main>
 <!--
 <aside class="pagination gxx_pagination">
