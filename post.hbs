@@ -5,7 +5,7 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-<main class="content" role="main">
+<div class="content" role="main">
     <div class="{{post_class}}">
         <div class="post-header">
             {{{title}}}
@@ -27,7 +27,7 @@
             <div id="disqus_thread"></div>
         </div>
     </div>
-</main>
+</div>
 <!--
 <aside class="pagination gxx_pagination">
     {{#prev_post}}
