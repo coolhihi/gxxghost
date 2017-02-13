@@ -46,8 +46,12 @@
                 $('.gxx_gotopbtn').show();
             }
             if (scrollTop > tbkTop - 42 && !$tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
+                console.log(scrollTop);
+                console.log(tbkTop);
                 $tbkDom.addClass('gxx_sidebar_tbk_fixed');
             } else if ($tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
+                console.log(scrollTop);
+                console.log(tbkTop);
                 $tbkDom.removeClass('gxx_sidebar_tbk_fixed');
             }
         });
