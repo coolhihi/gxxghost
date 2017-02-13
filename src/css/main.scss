@@ -575,6 +575,7 @@ a,a:visited,a:active,a:hover{
 .gxx_sidebar_tbk_fixed{
     position:fixed;
     top:42px;
+    z-index:99999;
     width:auto !important;
 }
 
