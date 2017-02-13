@@ -45,8 +45,10 @@
                 $('.gxx_header').attr('class','gxx_header gxx_fixheader');
                 $('.gxx_gotopbtn').show();
             }
-            if (scrollTop > tbkTop - 42 && !$tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
-                $tbkDom.addClass('gxx_sidebar_tbk_fixed');
+            if (scrollTop > tbkTop - 42) {
+                if (!$tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
+                    $tbkDom.addClass('gxx_sidebar_tbk_fixed');
+                }
             } else if ($tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
                 $tbkDom.removeClass('gxx_sidebar_tbk_fixed');
             }
