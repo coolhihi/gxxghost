@@ -28,6 +28,8 @@
                     $btn.addClass('gxx_sidebar_more_active');
                     $('#GxxSidebarTags a:gt('+(gxxconf.showtag-1)+')').removeClass('gxx_sidebar_tag_hidden');
                 }
+                // refresh tbk offsetTop
+                tbkTop = $tbkDom.offset().top;
             });
         }
         //more tag button listener - end
