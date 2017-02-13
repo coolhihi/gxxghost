@@ -6,6 +6,8 @@
     "use strict";
 
     var $document = $(document);
+    var $tbkDom = $('#TbkContainer');
+    var tbkTop = $tbkDom.offset().top;
 
     $document.ready(function () {
 
@@ -42,6 +44,11 @@
             else{
                 $('.gxx_header').attr('class','gxx_header gxx_fixheader');
                 $('.gxx_gotopbtn').show();
+            }
+            if (scrollTop > tbkTop - 42 && !$tbkDom.hasClass('tbk_fixed')) {
+                $tbkDom.addClass('tbk_fixed');
+            } else if ($tbkDom.hasClass('tbk_fixed')) {
+                $tbkDom.removeClass('tbk_fixed');
             }
         });
         //scroll to change the header style - end
