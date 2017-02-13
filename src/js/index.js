@@ -6,8 +6,6 @@
     "use strict";
 
     var $document = $(document);
-    var $tbkDom = $('#TbkContainer');
-    var tbkTop = $tbkDom.offset().top;
 
     $document.ready(function () {
 
@@ -35,6 +33,8 @@
         //more tag button listener - end
 
         //scroll to change the header style - start
+        var $tbkDom = $('#TbkContainer');
+        var tbkTop = $tbkDom.offset().top;
         $(document).scroll(function(){
             var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
             if(scrollTop<60){
@@ -46,12 +46,8 @@
                 $('.gxx_gotopbtn').show();
             }
             if (scrollTop > tbkTop - 42 && !$tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
-                console.log(scrollTop);
-                console.log(tbkTop);
                 $tbkDom.addClass('gxx_sidebar_tbk_fixed');
             } else if ($tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
-                console.log(scrollTop);
-                console.log(tbkTop);
                 $tbkDom.removeClass('gxx_sidebar_tbk_fixed');
             }
         });
