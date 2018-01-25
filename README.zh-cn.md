@@ -4,13 +4,13 @@
 
 用于 Ghost 的一款个人博客模板
 
-##预览
+## 预览
 
 [COoL's Blog](http://blog.gxxsite.com)
 
 ![截图](https://github.com/coolhihi/gxxghost/raw/master/_doc/gxxghost-screenshot.png)
 
-##特点
+## 特点
 
 1. 代码高亮
 2. 嵌入Disqus作评论系统
@@ -18,7 +18,7 @@
 4. 使用百度站内搜索
 5. 主题样式由COoL本人设计编码，但色彩参考Hexo的icarus主题及w3cplus网站
 
-##安装
+## 安装
 
 1. 安装 ghost
 2. 克隆本主题到 ghost 的主题文件夹（`content/themes`）
@@ -27,7 +27,7 @@
         $ git clone https://github.com/coolhihi/gxxghost.git
     
 
-##配置
+## 配置
 
 1. 修改头部标题
 
@@ -47,7 +47,7 @@
 
     编辑文件 `partials/custom/config.hbs`
     
-##使用方法
+## 使用方法
 
 1. 运行 ghost 后在网页上登录 ghost 后台
 2. 在 `General` 中选择主题为 `GxxGhost`
