@@ -4,13 +4,13 @@
 
 This is a theme for Ghost.
 
-##Preview
+## Preview
 
 [COoL's Blog](http://blog.gxxsite.com)
 
 ![screenshot](https://github.com/coolhihi/gxxghost/raw/master/_doc/gxxghost-screenshot.png)
 
-##Feature
+## Feature
 
 1. use highlightjs to highlight code
 2. use disqus for comments
@@ -18,7 +18,7 @@ This is a theme for Ghost.
 4. use baidu to handle the search
 5. design by COoL but somethings refer to the icarus theme of hexo and w3cplus
 
-##Installation
+## Installation
 
 1. install ghost
 2. checkout this repo to themes folder
@@ -27,7 +27,7 @@ This is a theme for Ghost.
         $ git clone https://github.com/coolhihi/gxxghost.git
     
 
-##Configuration
+## Configuration
 
 1. Blog title
 
@@ -47,7 +47,7 @@ This is a theme for Ghost.
 
     edit this file `partials/custom/config.hbs`
     
-##Use
+## Use
 
 1. log in your ghost manage platform
 2. go to `General` to select this `GxxGhost` theme
