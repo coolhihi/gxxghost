@@ -28,15 +28,11 @@
                     $btn.addClass('gxx_sidebar_more_active');
                     $('#GxxSidebarTags a:gt('+(gxxconf.showtag-1)+')').removeClass('gxx_sidebar_tag_hidden');
                 }
-                // refresh tbk offsetTop
-                tbkTop = $tbkDom.offset().top;
             });
         }
         //more tag button listener - end
 
         //scroll to change the header style - start
-        var $tbkDom = $('#TbkContainer');
-        var tbkTop = $tbkDom.offset().top;
         $(document).scroll(function(){
             var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
             if(scrollTop<60){
@@ -46,13 +42,6 @@
             else{
                 $('.gxx_header').attr('class','gxx_header gxx_fixheader');
                 $('.gxx_gotopbtn').show();
-            }
-            if (scrollTop > tbkTop - 42) {
-                if (!$tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
-                    $tbkDom.addClass('gxx_sidebar_tbk_fixed');
-                }
-            } else if ($tbkDom.hasClass('gxx_sidebar_tbk_fixed')) {
-                $tbkDom.removeClass('gxx_sidebar_tbk_fixed');
             }
         });
         //scroll to change the header style - end

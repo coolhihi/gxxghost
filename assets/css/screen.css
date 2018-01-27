@@ -261,7 +261,7 @@ html {
   height: 100%;
   max-height: 100%;
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -325,18 +325,13 @@ a {
   z-index: 10;
   min-height: 100%;
   background: #fff;
-  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 body.nav-opened .site-wrapper {
   overflow-x: hidden;
-  -webkit-transform: translate3D(-240px, 0, 0);
   transform: translate3D(-240px, 0, 0);
-  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 /* ==========================================================================
@@ -453,32 +448,12 @@ body.nav-opened .site-wrapper {
 /* ==========================================================================
     Animate keyframes
    ========================================================================== */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes fade-in {
@@ -487,14 +462,6 @@ body.nav-opened .site-wrapper {
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 @keyframes fade-out {
@@ -696,7 +663,7 @@ a, a:visited, a:active, a:hover {
   padding-left: 10px;
   font-size: 14px;
   height: 25px;
-  line-height: 16.66667px;
+  line-height: 16.6666666667px;
 }
 
 .gxx_search {
@@ -963,8 +930,7 @@ a, a:visited, a:active, a:hover {
   text-decoration: none;
   font-size: 28px;
   opacity: 0.7;
-  -webkit-transform: scale(0.8, 0.8);
-          transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
   transition: all 0.2s;
 }
 .gxx_mycontact a:link, .gxx_mycontact a:visited, .gxx_mycontact a:active {
@@ -974,8 +940,7 @@ a, a:visited, a:active, a:hover {
   opacity: 1;
   text-decoration: none;
   color: #38B7EA;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 .gxx_mycontact a[title]:hover:after {
   content: attr(title);
@@ -1165,13 +1130,11 @@ a, a:visited, a:active, a:hover {
 }
 .gxx_sidebar_more i {
   display: inline-block;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .gxx_sidebar_more_active i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .gxx_sidebar_tag_hidden {
