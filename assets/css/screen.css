@@ -26,7 +26,6 @@
 /* ==========================================================================
     Normalize.css v2.1.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
-@import url(https://fonts.googleapis.com/css?family=Poiret+One|Merriweather:300,700,700italic,300italic|Open+Sans:700,400);
 article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
@@ -262,11 +261,11 @@ html {
   height: 100%;
   max-height: 100%;
   font-size: 62.5%;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-  font-family: 'Hiragino Sans GB',Helvetica,Arial,'Microsoft Yahei',sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   letter-spacing: 0.01rem;
   font-size: 1.8rem;
   line-height: 1.75em;
@@ -326,18 +325,13 @@ a {
   z-index: 10;
   min-height: 100%;
   background: #fff;
-  transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 body.nav-opened .site-wrapper {
   overflow-x: hidden;
-  -webkit-transform: translate3D(-240px, 0, 0);
   transform: translate3D(-240px, 0, 0);
-  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 /* ==========================================================================
@@ -454,32 +448,12 @@ body.nav-opened .site-wrapper {
 /* ==========================================================================
     Animate keyframes
    ========================================================================== */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes fade-in {
@@ -488,14 +462,6 @@ body.nav-opened .site-wrapper {
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 @keyframes fade-out {
@@ -638,8 +604,8 @@ html {
 body {
   background: #f5f8f9;
   color: #565a5f;
-  font-family: "Hiragino Sans GB", Helvetica, Arial, "Microsoft Yahei", sans-serif !important;
-  font-weight: 100;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif !important;
+  font-weight: 300;
   padding-top: 70px;
   text-rendering: auto;
 }
@@ -687,7 +653,6 @@ a, a:visited, a:active, a:hover {
   font-size: 24px;
   height: 25px;
   line-height: 25px;
-  transition: all 250ms;
 }
 
 .gxx_ssign {
@@ -698,8 +663,7 @@ a, a:visited, a:active, a:hover {
   padding-left: 10px;
   font-size: 14px;
   height: 25px;
-  line-height: 16.66667px;
-  transition: all 250ms;
+  line-height: 16.6666666667px;
 }
 
 .gxx_search {
@@ -722,7 +686,6 @@ a, a:visited, a:active, a:hover {
   line-height: 32px;
   color: #666666;
   font-size: 16px;
-  transition: opacity 250ms;
   border: none;
   background: none;
   opacity: 0.5;
@@ -746,7 +709,6 @@ a, a:visited, a:active, a:hover {
   border-radius: 16px;
   color: #666666;
   opacity: 0.5;
-  transition: all 250ms;
 }
 .gxx_search input[type="search"]::-webkit-input-placeholder, .gxx_search input[type="text"]::-webkit-input-placeholder {
   color: #999999;
@@ -780,7 +742,6 @@ a, a:visited, a:active, a:hover {
   color: #565a5f;
   background: #ffffff;
   padding: 0 20px;
-  transition: all 250ms;
 }
 .gxx_nav a:link, .gxx_nav a:visited, .gxx_nav a:active {
   text-decoration: none;
@@ -969,8 +930,7 @@ a, a:visited, a:active, a:hover {
   text-decoration: none;
   font-size: 28px;
   opacity: 0.7;
-  -webkit-transform: scale(0.8, 0.8);
-          transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
   transition: all 0.2s;
 }
 .gxx_mycontact a:link, .gxx_mycontact a:visited, .gxx_mycontact a:active {
@@ -980,8 +940,7 @@ a, a:visited, a:active, a:hover {
   opacity: 1;
   text-decoration: none;
   color: #38B7EA;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 .gxx_mycontact a[title]:hover:after {
   content: attr(title);
@@ -1171,17 +1130,22 @@ a, a:visited, a:active, a:hover {
 }
 .gxx_sidebar_more i {
   display: inline-block;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .gxx_sidebar_more_active i {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .gxx_sidebar_tag_hidden {
   display: none;
+}
+
+.gxx_sidebar_tbk_fixed {
+  position: fixed;
+  top: 42px;
+  z-index: 99999;
+  width: auto !important;
 }
 
 /* ==========================================================================
@@ -1221,7 +1185,7 @@ a, a:visited, a:active, a:hover {
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 36px;
+  margin-bottom: 22px;
   vertical-align: baseline;
 }
 
@@ -1229,12 +1193,11 @@ a, a:visited, a:active, a:hover {
   display: block;
   padding: 20px 20px 0 20px;
   text-align: left;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .post-header a {
-  font-size: 3rem;
-  line-height: 1.6rem;
   color: #565a5f;
   text-decoration: none;
   transition: color 250ms;
@@ -1251,8 +1214,8 @@ a, a:visited, a:active, a:hover {
 .post-excerpt {
   clear: left;
   display: block;
-  padding: 2rem 20px;
-  text-align: left;
+  padding: 1.5rem 20px;
+  text-align: justify;
   color: #565a5f;
   font-size: 1.8rem;
   line-height: 2.2rem;
@@ -1596,14 +1559,77 @@ a, a:visited, a:active, a:hover {
   text-align: left;
 }
 
+.gxx_loadspinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -30px;
+  margin-left: -20px;
+  width: 40px;
+  height: 60px;
+  overflow: hidden;
+  display: none;
+}
+.gxx_loadspinner svg path,
+.gxx_loadspinner svg rect {
+  fill: #38B7EA;
+}
+
+.gxx_reward {
+  text-align: center;
+  font-size: 12px;
+  color: #888888;
+  line-height: 30px;
+  margin-top: 40px;
+  border-top: 1px dotted #eeeeee;
+  padding-top: 20px;
+}
+
+.gxx_reward_btn {
+  display: inline-block;
+  width: 70px;
+  height: 24px;
+  background: #38B7EA;
+  color: #ffffff;
+  line-height: 24px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.gxx_reward_btn:hover {
+  background: #55c2ed;
+}
+
+.gxx_reward_qrcode {
+  text-align: center;
+  margin-top: 15px;
+  display: none;
+}
+.gxx_reward_qrcode img {
+  width: 200px;
+  height: auto;
+  display: inline-block;
+}
+
+/* ==========================================================================
+    Media Queries - Smaller than 1300px
+   ========================================================================== */
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 54%;
+  }
+
+  .post-meta {
+    padding-top: 5px;
+  }
+
+  .post-excerpt {
+    padding-top: 5px;
+  }
+}
 /* ==========================================================================
     Media Queries - Smaller than 900px
    ========================================================================== */
 @media only screen and (max-width: 900px) {
-  html {
-    font-size: 50%;
-  }
-
   .gxx_search {
     display: none;
   }

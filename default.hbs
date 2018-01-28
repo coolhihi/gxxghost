@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans-CN">
 <head>
     {{! Document Settings }}
     <meta charset="utf-8" />
@@ -10,9 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
 
-    {{> custom/meta}}
-
     {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="//fonts.proxy.ustclug.org/css?family=Poiret+One|Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.min.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
@@ -27,11 +26,14 @@
         <div class="gxx_header_con clearfix">
             {{> custom/sitetitle}}
             <div class="gxx_search" id="bdcs">
-                <form id="bdcs-search-form" action="http://zhannei.baidu.com/cse/search" method="get" target="_blank">
-                    <input name="s" type="hidden" id="bdcs-search-form-sid" value="">
-                    <input type="search" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" value="" placeholder="搜索" />
-                    <input name="entry" type="hidden" value="1">
-                    <input type="submit" class="gxxicon bdcs-search-form-submit" id="bdcs-search-form-submit" value="&#xe601;" />
+                <form action="//www.google.com/search" method="get" target="_blank">
+                    <input type="search" name="q" value="" placeholder="搜索" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+                    <input type="hidden" name="oe" value="UTF-8" />
+                    <input type="hidden" name="hl" value="zh-CN" />
+                    <input type="hidden" name="domains" value="blog.gxxsite.com" />
+                    <input type="hidden" name="sitesearch" value="blog.gxxsite.com" />
+                    <input type="submit" class="gxxicon" value="&#xe601;" />
                 </form>
             </div>
             {{navigation}}
@@ -49,17 +51,37 @@
             </div>
         </div>
     </div>
-    <footer class="gxx_footer">
+    <div class="gxx_footer">
         <div class="gxx_footer_con clearfix">
-            <section class="gxx_copyright">
-            <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="gxx_poweredby">Powered by <a href="https://ghost.org" target="_blank">Ghost</a>. Theme by <a href="https://github.com/coolhihi/gxxghost" target="_blank">GxxGhost</a></section>
+            <div class="gxx_copyright">
+            <a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</div>
+            <div class="gxx_poweredby">Powered by <a href="https://ghost.org" target="_blank">Ghost</a>. Theme by <a href="https://github.com/coolhihi/gxxghost" target="_blank">GxxGhost</a></div>
         </div>
-    </footer>
+    </div>
     <div class="gxx_floatlayer">
         <a class="gxx_gotopbtn">
             <i class="gxxicon-top"></i>
         </a>
+    </div>
+    <div class="gxx_loadspinner">
+        <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="40px" height="60px" viewBox="0 0 40 60" xml:space="preserve">
+            <rect x="0" y="20" width="8" height="20" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="20; 40; 20" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="20; 10; 20" begin="0s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="20" width="8" height="20" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="20; 40; 20" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="20; 10; 20" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="32" y="20" width="8" height="20" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="20; 40; 20" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="20; 10; 20" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+        </svg>
     </div>
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></script>

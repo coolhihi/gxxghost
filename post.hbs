@@ -5,11 +5,11 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-<main class="content" role="main">
-    <article class="{{post_class}}">
-        <header class="post-header">
+<div class="content" role="main">
+    <div class="{{post_class}}">
+        <div class="post-header">
             {{{title}}}
-        </header>
+        </div>
         <div class="post-meta">
             <i class="gxxicon-tag"></i>
             {{tags prefix=" "}}
@@ -17,17 +17,27 @@
             <div class="post-comment"><i class="gxxicon-comment"></i> <a href="{{url}}#disqus_thread"></a></div>
         </div>
 
-        <section class="post-content">
+        <div class="post-content">
             {{content}}
-        </section>
+            <div class="gxx_reward">
+                <span>若您觉得我的博文对您有帮助，欢迎点击下方按钮对我打赏</span>
+                <br>
+                <div class="gxx_reward_btn">打赏</div>
+                <br>
+                <div class="gxx_reward_qrcode">
+                    <img src="{{asset "img/wepay.png"}}">
+                    <img src="{{asset "img/alipay.png"}}">
+                </div>
+            </div>
+        </div>
 
-        <footer class="post-footer">
+        <div class="post-footer">
             <input type="hidden" id="GxxPostUrl" value="{{url}}" />
-            <input type="hidden" id="GxxPostId" value="ghost-{{id}}" />
+            <input type="hidden" id="GxxPostId" value="ghost-{{comment_id}}" />
             <div id="disqus_thread"></div>
-        </footer>
-    </article>
-</main>
+        </div>
+    </div>
+</div>
 <!--
 <aside class="pagination gxx_pagination">
     {{#prev_post}}

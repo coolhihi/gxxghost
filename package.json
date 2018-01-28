@@ -1,6 +1,13 @@
 {
-    "name": "GxxGhost",
-    "version": "1.2",
-    "author": "COoL",
-    "homepage": "http://gxxsite.com"
+  "name": "gxxghost",
+  "version": "2.0.0",
+  "author": {
+    "name": "COoL",
+    "email": "master@gxxsite.com",
+    "url": "https://www.gxxsite.com"
+  },
+  "config": {
+    "posts_per_page": 10
+  },
+  "homepage": "https://www.gxxsite.com"
 }

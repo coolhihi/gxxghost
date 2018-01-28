@@ -5,22 +5,22 @@
 
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
+<div class="{{post_class}}">
+    <div class="post-header">
         <a href="{{url}}">{{{title}}}</a>
-    </header>
+    </div>
     <div class="post-meta">
-        <!--{{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+        <!--{{#if author.profile_image}}<img class="author-thumb" src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
         {{author}}-->
         <i class="gxxicon-tag"></i>
         {{tags prefix=" "}}
         <time class="post-date" datetime="{{date format='YYYY年MM月DD日'}}"><i class="gxxicon-time"></i> {{date format="YYYY年MM月DD日"}}</time>
         <div class="post-comment"><i class="gxxicon-comment"></i> <a href="{{url}}#disqus_thread"></a></div>
     </div>
-    <section class="post-excerpt">
+    <div class="post-excerpt">
         <p>{{excerpt characters="160"}} <a class="read-more" href="{{url}}">Read&raquo;</a></p>
-    </section>
-</article>
+    </div>
+</div>
 {{/foreach}}
 
 {{! Previous/next page links - displayed on every page }}

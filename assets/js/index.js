@@ -47,11 +47,13 @@
         //scroll to change the header style - end
         
         //baidu zhannei search - start
+        /*
         document.getElementById('bdcs-search-form-sid').value=gxxconf.bdznsid;
         var bdcs = document.createElement('script');
         bdcs.type = 'text/javascript';bdcs.async = true;
-        bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=' + gxxconf.bdznsid + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
+        bdcs.src = '//znsv.baidu.com/customer_search/api/js?sid=' + gxxconf.bdznsid + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bdcs);
+        */
         //baidu zhannei search - end
 
         //google analytics init - start
@@ -73,6 +75,9 @@
         
         //Init when onload or pjax success - start
         function gxxPostInit() {
+            $('.gxx_reward_btn').click(function () {
+                $('.gxx_reward_qrcode').css('display', 'inline-block');
+            });
             if($('#disqus_thread').length) {
                 var disqus_config = function () {
                     this.page.url = $('#GxxPostUrl').val();  // Replace PAGE_URL with your page's canonical URL variable
@@ -98,15 +103,31 @@
 
             //刷新评论数
             window.DISQUSWIDGETS = undefined;
-            $.getScript("http://" + gxxconf.disqus_shortname + ".disqus.com/count.js");
+            $.getScript("//" + gxxconf.disqus_shortname + ".disqus.com/count.js");
 
             //发送更新通知到google analytics
             ga("send", "pageview", {"page": location.pathname, "title": document.title});
+
+            //推送网址给百度
+            var bpurl = '';
+            if (window.location.protocol.split(':')[0] === 'https') {
+                bpurl = '//zz.bdstatic.com/linksubmit/push.js';        
+            }
+            else {
+                bpurl = '//push.zhanzhang.baidu.com/push.js';
+            }
+            $.getScript(bpurl);
         }
         gxxPostInit();
         //Init when onload or pjax success - end
 
         //Pjax - start
+        $(document).on('pjax:send', function() {
+            $('.gxx_loadspinner').show();
+        });
+        $(document).on('pjax:complete', function() {
+            $('.gxx_loadspinner').hide();
+        });
         $(document).on('pjax:success', function() {
             var a = document.createElement('a');
             a.href = document.URL;
