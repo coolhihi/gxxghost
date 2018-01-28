@@ -26,8 +26,6 @@
 
 ## 个性化配置
 
-## 配置
-
 1. 修改头部标题
 
     编辑文件 `partials/custom/sitetitle.hbs`
