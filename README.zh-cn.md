@@ -22,7 +22,8 @@
 2. 嵌入Disqus作评论系统
 3. 使用pjax实现全站无刷新切换内容
 4. 使用谷歌站内搜索
-5. 主题样式由COoL本人设计编码，但色彩参考Hexo的icarus主题及w3cplus网站
+5. 其他人现在可以通过扫描您的收款二维码给您打赏
+6. 主题样式由COoL本人设计编码，但色彩参考Hexo的icarus主题及w3cplus网站
 
 ## 个性化配置
 
@@ -39,6 +40,8 @@
 4. 修改disqus的shortname，google analytics的网站id，侧边栏tag默认显示的数量
 
     编辑文件 `partials/custom/config.hbs`
+
+5. 上传您的微信收款二维码和支付宝收款二维码，替换`assets/img/wepay.png`和`assets/img/alipay.png`，这两张二维码将显示在博文的下方，访客可以通过扫描二维码给您打赏
 
 ## 布置使用
 

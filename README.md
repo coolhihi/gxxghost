@@ -22,7 +22,8 @@ This branch only support Ghost 1.x
 2. use disqus for comments
 3. use pjax
 4. use google to handle the search
-5. design by COoL but somethings refer to the icarus theme of hexo and w3cplus
+5. others can give you a reward by scan qrcode
+6. design by COoL but somethings refer to the icarus theme of hexo and w3cplus
 
 ## Custom setting
 
@@ -39,6 +40,8 @@ This branch only support Ghost 1.x
 4. change disqus's shortname, google analytics id, tag default size
 
     edit this file `partials/custom/config.hbs`
+
+5. update `assets/img/wepay.png` and `assets/img/alipay.png`, they are the qrcode which visitors can give you a reward
     
 ## Use
 
