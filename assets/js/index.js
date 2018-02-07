@@ -75,6 +75,19 @@
         
         //Init when onload or pjax success - start
         function gxxPostInit() {
+            $('.gxx_nav a').removeClass('gxx_nav_active');
+            if (location.pathname && location.pathname === '/') {
+                $('.gxx_nav a').eq(0).addClass('gxx_nav_active');
+            } else if (location.pathname && location.pathname === '/tag/bi-ji/') {
+                $('.gxx_nav a').eq(1).addClass('gxx_nav_active');
+                $('.gxx_activetag').remove();
+            } else if (location.pathname && location.pathname === '/tag/zuo-pin/') {
+                $('.gxx_nav a').eq(2).addClass('gxx_nav_active');
+                $('.gxx_activetag').remove();
+            } else if (location.pathname && location.pathname === '/tag/za-huo/') {
+                $('.gxx_nav a').eq(3).addClass('gxx_nav_active');
+                $('.gxx_activetag').remove();
+            }
             $('.gxx_reward_btn').click(function () {
                 $('.gxx_reward_qrcode').css('display', 'inline-block');
             });
