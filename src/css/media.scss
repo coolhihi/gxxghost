@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* ==========================================================================
+    Media Queries - Smaller than 1300px
+   ========================================================================== */
+
+@media only screen and (max-width: 1300px) {
+    html{
+        font-size:54%;
+    }
+    .post-meta{
+        padding-top:5px
+    }
+    .post-excerpt{
+        padding-top:5px;
+    }
+}
+
+/* ==========================================================================
+    Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 900px) {
+    .gxx_search{
+        display:none;
+    }
+    .gxx_sidebar{
+        display:none;
+    }
+    .gxx_sidebar{
+        display:none;
+    }
+    .gxx_wrapper{
+        width:100%;
+        padding:0;
+    }
+    .post{
+        margin-bottom:16px;
+    }
+}
+
+
+/* ==========================================================================
+    Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+    body{
+        padding-top:30px;
+    }
+    .gxx_header{
+        height:$framework-header-fixheight;
+        border-top-width:1px;
+        .gxx_sname{
+            font-size:18px;
+            height:$framework-header-fixheight;
+            line-height:$framework-header-fixheight;
+            margin-top:0;
+        }
+        .gxx_ssign{
+            margin-left:-100px;
+            opacity:0;
+            display:none;
+        }
+        .gxx_search{
+            margin-top:($framework-header-fixheight - $framework-search-fixheight) / 2;
+            height:$framework-search-fixheight !important;
+
+            input[type="submit"],input[type="button"]{
+                width:$framework-search-fixheight;
+                height:$framework-search-fixheight;
+                line-height:$framework-search-fixheight;
+                font-size:12px;
+            }
+            input[type="search"],input[type="text"]{
+                height:$framework-search-fixheight !important;
+                border-radius:$framework-search-fixheight / 2;
+                font-size:12px;
+            }
+        }
+        .gxx_nav{
+            line-height:$framework-header-fixheight;
+
+            a{
+                height:$framework-header-fixheight;
+                font-size:$framework-nav-fixfontsize;
+                padding:0 $framework-nav-fixpadding;
+            }
+        }
+    }
+}

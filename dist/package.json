@@ -1,0 +1,12 @@
+{
+  "name": "gxxghost",
+  "version": "2.1.1",
+  "author": {
+    "name": "COoL",
+    "email": "master@gxxsite.com",
+    "url": "https://www.gxxsite.com"
+  },
+  "config": {
+    "posts_per_page": 10
+  }
+}

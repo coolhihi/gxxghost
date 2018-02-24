@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* ==========================================================================
+    Icon font and Font online
+   ========================================================================== */
+
+/* google font */
+//@import url(https://fonts.googleapis.com/css?family=Poiret+One|Merriweather:300,700,700italic,300italic|Open+Sans:700,400);
+//@import url(http://fonts.useso.com/css?family=Poiret+One|Merriweather:300,700,700italic,300italic|Open+Sans:700,400);
+
+@font-face {
+    font-family: 'gxxiconfont';
+    src: url('../font/gxx-iconfont.eot'); /* IE9*/
+    src: url('../font/gxx-iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/gxx-iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/gxx-iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/gxx-iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.gxxicon{
+    font-family:"gxxiconfont" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class^="gxxicon-"]:before, [class*=" gxxicon-"]:before {
+    font-family:"gxxiconfont" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.gxxicon-qq:before { content: "\e600"; }
+.gxxicon-search:before { content: "\e601"; }
+.gxxicon-share:before { content: "\e602"; }
+.gxxicon-wechat:before { content: "\e603"; }
+.gxxicon-tag:before { content: "\e604"; }
+.gxxicon-github:before { content: "\e605"; }
+.gxxicon-comment:before { content: "\e606"; }
+.gxxicon-twitter:before { content: "\e607"; }
+.gxxicon-facebook:before { content: "\e608"; }
+.gxxicon-mail:before { content: "\e609"; }
+.gxxicon-top:before { content: "\e60a"; }
+.gxxicon-weibo:before { content: "\e60b"; }
+.gxxicon-bitbucket:before { content: "\e611"; }
+.gxxicon-theme:before { content: "\e60d"; }
+.gxxicon-time:before { content: "\e60e"; }
+.gxxicon-google:before { content: "\e60f"; }
+.gxxicon-code:before { content: "\e610"; }
